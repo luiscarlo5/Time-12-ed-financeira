@@ -1,0 +1,68 @@
+.Cabecalho {
+  display: block;
+  
+}
+
+.fundoinicial {
+  display: block;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: aquamarine;
+  padding: 10px;
+  padding-bottom: 30px;
+  margin: 0px;
+  margin-top: 150px;
+
+  text-align: center;
+  align-items: center;
+  height: 240px;
+  max-width: 100%;
+  width: 100%;
+  margin-top: 15px;
+
+  border-radius: 10px 35px;
+  background-image:url('../img/971.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+}
+
+.fundoinicial h1 {
+  margin: 6px;
+  margin-top: 30px;
+}
+
+.titulo {
+  font-size: 5.5rem;
+  width: 100%;
+  height: auto;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between; /* Distribui as tags <a> uniformemente ao longo do contêiner */
+  font-weight: bold;
+  padding: 30px;
+  margin: 0px;
+  margin-top: 20px;
+
+}
+
+.menu a {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: aquamarine;
+  color:black;
+  font-style: italic;
+  padding: 10px;
+  margin: 10px;
+  font-size: 1rem;
+  border-radius: 10px 10px;
+}
+
+.menu a:hover {
+  background-color: rgb(8, 160, 109);
+  font-weight: bold; /*deixa negrito*/
+
+}

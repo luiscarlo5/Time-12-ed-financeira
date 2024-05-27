@@ -1,0 +1,6 @@
+{% extends 'projetoVS.html' %}
+
+{% block imagem_enviada %}
+<h1>Imagem Enviada</h1>
+<img class="img-enviada" src="{{url_for('static', filename='/files_SAVED/'+imagem_url)}}" alt="">
+{% endblock %}

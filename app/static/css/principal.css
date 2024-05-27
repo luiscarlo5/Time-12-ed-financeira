@@ -1,0 +1,234 @@
+.principal_informativo {
+  display: grid;
+  grid-template-rows: auto repeat(300, 3);
+  grid-template-columns: 50% 50%; /* A primeira coluna terá a largura automática para se ajustar ao tamanho da imagem, e a segunda coluna ocupará o restante do espaço disponível */
+  gap: 10px; /* Espaçamento entre as colunas */
+  padding: 12px;
+
+}
+
+.tecnicas_titulo {
+  display: block;
+  grid-row: 1;
+  grid-column: 1/-1;
+  justify-self: center;
+  align-self: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 2.8rem;
+}
+
+.tecnicas_img{ 
+  grid-column: 1;
+  padding: 10px;
+}
+.tecnicas_img img{ 
+  width: 95%;
+  height: 300px;
+  margin-bottom: 18px;
+}
+
+.tecnicas_texto {
+
+  margin: 0px;
+  grid-column: 2/-1;
+  width: 98%;
+  height:92%;
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+
+}
+.tecnicas_texto p {
+
+  display: inline;
+  font-size: 1.4rem;
+  height: 240px;
+  max-height: auto;
+  margin-bottom: 60px;
+
+}
+.tecnicas_texto :nth-child(4) {
+  height: 160px;
+  font-size: 1.4rem;
+
+}
+
+.tecnicas_texto :nth-child(2n+1) {
+  margin-bottom: 2px;
+  margin-left: -20px;
+
+}
+
+.tecnicas_texto h3 {
+  border-left: 0.5rem  solid white;
+
+  text-decoration: 8.4999px underline white;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 3.3rem;
+  height: auto;
+  max-height: auto;
+  gap: 5px;
+}
+  
+/****INTRODUÇÂO********/
+
+.principal_introducao {
+  display: grid;
+  margin: 30px;
+  grid-template-columns: 50% 50%;
+}
+
+.intro-img {
+  display: block;
+  grid-column: 2;
+  align-content: center;
+  height: 100%;
+  width: 100%;
+  border-radius: 260px;
+}
+.intro-img img {
+  display: block;
+  grid-column: 2;
+  align-content: center;
+  height: 100%;
+  border-radius: 160px 15px;
+}
+
+.intro-p {
+  color:white;
+  padding: 10px;
+  margin-top: 30px;
+  display: block;
+  text-align: justify;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  font-size: 1.6rem;
+}
+
+.intro-text h2 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 8rem;
+  line-height: 6rem; 
+}
+.profissao {
+  font-weight: bold; /*deixa negrito*/
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  color: rgb(4, 95, 95);
+  margin-left: 0px;
+  margin-bottom: -44px;
+  font-size: 3rem;
+  font-style: italic;
+  font-style: oblique;
+  justify-self: center;
+
+}
+.nome1 {
+  font-size: 9rem;
+  -webkit-text-stroke: 2px white; /* Espessura e cor da borda */
+  color: transparent; 
+  margin-left: 50px;
+  margin-bottom: -10px;
+  margin-top: 20px;
+
+  position: absolute;
+  z-index: 2;
+}
+.nome2 {
+  color: rgb(3, 104, 104);
+  margin-left: 200px;
+  margin-top: 60px;
+  margin-bottom: 0px;
+
+  position: relative;
+  z-index: 1;
+}
+/*   Quem Somos?   */
+.quem-somos {
+  display: grid;
+  gap: 10px; /* Espaçamento entre as colunas */
+  padding: 12px;
+  grid-template-columns: 40% 56% 4%;
+  grid-template-rows: auto 590px;
+  max-height: auto;
+  margin: 4px;
+}
+
+.quem-somos h3{
+  grid-column: 1/-1;
+  grid-row: 1;
+  text-align: center;
+  justify-items: center;
+  font-size: 5rem;
+  font-family: 'Times New Roman', Times, serif;
+}
+.apresentacao-equipe-img li{
+  display: block;
+  grid-row: 2;
+  grid-column: 1;
+  max-width: 100%;
+  border: solid wheat;
+  max-height: 420px;
+  height: 420px;
+  padding: 2px;
+  margin: 5px;
+
+}
+
+.quem-somos button{
+  grid-column: 3;
+  grid-row: 2;
+  height: 430px;
+  background-color: aqua;
+  color: rgb(255, 255, 255);
+  font-size: 3rem;
+  margin: 0px;
+}
+.quem-somos button:hover {
+  background-color: red;
+}
+.apresentacao-equipe-text section{
+  display: block;
+  margin-top: 30px;
+  height: 390px;
+  grid-row: 2;
+  grid-column: 2;
+}
+.apresentacao-equipe-text h2{
+  color: aquamarine;
+  font-size: 4.4rem;
+}
+.apresentacao-equipe-text p{
+  margin-top: 10px;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.apresentacao-equipe-text section,
+.apresentacao-equipe-img li{
+  display: none;
+}
+
+.apresentacao-equipe-text section.ativo,
+.apresentacao-equipe-img li.ativo{
+  display: block !important;
+  animation: show 1s forwards !important;
+}
+.ativo2{
+
+  border: solid black !important;
+  animation: show 1s forwards !important;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv='X-UA-Compatible' content="IE=edge">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/projetoMand.css') }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nosso Projeto-mandacaru.dev</title>
+</head>
+
+<body>
+  <header class="Cabecalho">
+    <div class="fundoinicial">
+      <h1 class="titulo">Mandacaru.dev The Twelve</h1>
+
+      <nav class="navegador">
+        <ul class="menu">
+
+          <li><a href="#Apres" onclick="rolardevagar('Apres')">Apresentação</a></li>
+          <li><a href="#f1" onclick="rolardevagar('f1')">Login/Cadastro</a></li>
+          <li><a href="#f2" onclick="rolardevagar('f2')">Funcionalidade 2</a></li>
+          <li><a href="#f3" onclick="rolardevagar('f3')">funciionalidade 3</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <article class="principal_introducao">
+      <div class="intro-text">
+        <p id="Apres" class="profissao">Desenvolvedores de Software na Educação Financeira</p>
+        <h2 class="nome1">Nosso</h2>
+        <h2 class="nome2">Projeto</h2>
+        <p class="intro-p">Aqui cuidaremos melhor do seu dinheiro e mostraremos analises atuais e previsões futuras de seus gastos e possíveis ivestimentos</p>
+      </div>
+      <div class="intro-img">
+        <img src="{{url_for('static', filename='/img/img1.jpg')}}" alt=" ">
+      </div>
+    </article>
+
+
+
+    <section class="quem-somos">
+      <h3>Quem somos?</h3>
+      <button id="botao-apresentacao-equipe">>
+        >
+        >
+        >
+      </button>
+      <ul class="apresentacao-equipe-img">
+        <li><img src="{{url_for('static', filename='/img/quemsomos/fotoLuisCarlos.jpg')}}" alt=" "></li>
+        <li><img src="{{url_for('static', filename='/img/img1.jpg')}}" alt=" "></li>
+        <li><img src="{{url_for('static', filename='/img/img1.jpg')}}" alt=" "></li>
+        <li><img src="{{url_for('static', filename='/img/img1.jpg')}}" alt=" "></li>
+      </ul>
+      <div class="apresentacao-equipe-text">
+        <section>
+          <h2>
+            Luis Carlos
+          </h2>
+          <p>Estudante de Engenharia de Computação (7/10)
+            Conhecimento e aplicações em programção web, ciência de dados, processamento de imagem e gestão e metodologia ágil.
+          </p>
+        </section>
+        <section>
+          <h2>Antônio Ermeson</h2>
+          <p>cccccccccccccccccccccccccccc</p>
+        </section>
+        <section>
+          <h2>Carlos Gutierrez</h2>
+          <p>cccccccccccccccccccccccccccc</p>
+        </section>
+        <section>
+          <h2>Carla Suene</h2>
+          <p>oooooooooooooooooooooo
+          <p>
+        </section>
+      </div>
+    </section>
+
+
+
+    <section class="processamento">
+      <div class="processamento-parte2">
+        {% block imagem_enviada %}
+
+        <h1>Imagem aparecerá abaixo</h1>
+        <img class="img-processada" src="{{url_for('static', filename='/files_SAVED/Jesus Superhero.jpg')}}" alt=" ">
+
+        {% endblock %}
+
+      </div>
+      <div class="processamento-parte1">
+        <form class="menu-tec-apr">
+          <h2 class="explicacao-proc">Escolha o tipo vizualização de gráfico que será utilizado</h2>
+          <input type="radio" id="EH" name="tecnicas_aprimoramento" value='Equalizacao de Histograma'>
+          <label for="Equalizacao de Histograma">Histograma</label><br>
+
+          <input type="radio" id="CG" name="tecnicas_aprimoramento" value='Correcao de Gama'>
+          <label for="Correcao de Gama">Pizza</label><br>
+
+          <input type="radio" id="Wavelet" name="tecnicas_aprimoramento" value='Wavelet'>
+          <label for="Wavelet">Gráfico em coluna</label><br>
+
+          <input type="radio" id="RGHS" name="tecnicas_aprimoramento" value='RGHS'>
+          <label for="RGHS">Gráfico de linha</label>
+
+        </form>
+
+        <form id="upload-form" class="envio-imagem" action="http://127.0.0.1:5000/arquivo" method="POST" enctype="multipart/form-data">
+          <label for="escolher">Escolha a imagem em seus arquivos</label>
+          <input id="escolher" class="botao-input" type="file" id="image" name="image">
+          <input class="botao-enviar" type="submit" value="Enviar"></button>
+        </form>
+      </div>
+    </section>
+
+    <div class="processamento-parte3">
+      <h1>Adicionar Nomes e Valores</h1>
+      <form action="/submit" method="post">
+        <fieldset>
+          <legend>Gastos mensal</legend>
+          <label for="nome3_valor2">Valor 2:</label>
+          <input type="text" id="nome1" name="nome31"><br><br>
+          <label for="nome3_valor2">Valor 2:</label>
+          <input type="number" id="nome3_valor2" name="nome3_valor2"><br><br>
+          <label for="nome3_valor3">Valor 3:</label>
+          <input type="text" id="nome3_valor3" name="nome3_valor3"><br><br>
+          <label for="nome3_valor4">Valor 4:</label>
+          <input type="text" id="nome3_valor4" name="nome3_valor4"><br><br>
+        </fieldset>
+      </form>
+      <!-- <form action="/submit" method="post">
+        {% for i in range(1, 4) %}
+        <fieldset>
+          <legend>Entrada {{ i }}</legend>
+          <label for="name{{ i }}">Nome {{ i }}:</label>
+          <input type="text" id="name{{ i }}" name="name{{ i }}" required><br><br>
+          <label for="value{{ i }}">Valor {{ i }}:</label>
+          <input type="number" id="value{{ i }}" name="value{{ i }}" step="any" required><br><br>
+        </fieldset>
+        {% endfor %}
+        <input type="submit" value="Adicionar">
+      </form> -->
+    </div>
+
+
+
+    <article class="principal_informativo">
+      <h3 class="tecnicas_titulo">Técnicas de Aprimoramento de Imagem</h3>
+      <div class="tecnicas_img">
+        <img src="{{ url_for('static', filename='/img/correcaogama.webp') }}" alt=" ">
+        <img src="{{ url_for('static', filename='/img/equalizacaohistograma.png') }}" alt=" ">
+        <img src="{{ url_for('static', filename='/img/wavelet.gif') }}" alt=" ">
+      </div>
+      <div class="tecnicas_texto">
+        <h3 id="f1">Funcionalidade 1</h3>
+        <p>A técnica de aprimoramento de correção de gama é um método utilizado no processamento de imagens para ajustar o contraste e a luminosidade de uma dada imagem que envolve a manipulação da curva de resposta de intensidade da imagem, alterando a distribuição dos valores de cor ou de intensidade. A curva de resposta de intensidade de uma imagem descreve a relação entre os valores de entrada e os valores de saída.</p>
+
+        <h3 id="f2">Funcionalidade 2</h3>
+        <p>A técnica de aprimoramento de equalização de histograma é um método para normalizar a distribuição da probabilidade de ocorrência de valores de intensidade na imagem.
+        </p>
+
+        <h3 id="f3">Funcionalidade 3</h3>
+        <p>A transformada de wavelet corresponde a uma técnica matemática que divide um sinal ou imagem em diferentes componentes de frequência, permitindo uma representação mais eficiente e compacta da informação. Ela é especialmente útil em processamento de imagem devido à sua capacidade de representar tanto detalhes finos quanto características globais da imagem</p>
+      </div>
+    </article>
+
+    <article class="principal principal_2">
+      <h1>Meu teste</h1>
+
+
+    </article>
+
+
+  </main>
+  <footer class="rodape">
+    <p>Time 12. Alguns Direitos Reservados.</p>
+  </footer>
+  <script src="{{ url_for('static', filename='js/projetoVS.js') }}"></script>
+</body>
+
+</html>
