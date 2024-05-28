@@ -5,8 +5,10 @@
   <meta charset="UTF-8">
   <meta http-equiv='X-UA-Compatible' content="IE=edge">
   <link rel="stylesheet" href="../static/css/projetoMand.css">
-  <script src="../static/js/projetoVS.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.className += ' js';</script>
+  <script src="../static/js/projetoVS.js"></script>
+
   <title>Nosso Projeto-mandacaru.dev</title>
 </head>
 
@@ -27,6 +29,7 @@
     </div>
   </header>
   <main>
+    {% block principal-introducao %}
     <article class="principal_introducao">
       <div class="intro-text">
         <p id="Apres" class="profissao">Desenvolvedores de Software na Educação Financeira</p>
@@ -38,30 +41,28 @@
         <img src="../static/img/img1.jpg" alt=" ">
       </div>
     </article>
-
-
-
     <section class="quem-somos">
       <h3>Quem somos?</h3>
-      <button id="botao-apresentacao-equipe" onclick="tome111()">>
-        >
-        >
-        >
+      <p>Somos um grupo de desenvolvedores de aplicações tecnologicas chamada The Twelve, e nosso foco está em apliar e formar uma cosmovisão, em brasileiros, sobre Educação Financeira através de softwares avançados e dinânmicos</p>
+      <button id="botao-apresentacao-equipe">>
       </button>
       <ul class="apresentacao-equipe-img">
-        <li class="ativo"><img src="../static/img/quemsomos/fotoLuisCarlos.jpg" alt=" "></li>
-        <li><img src="../static/img/img1.jpg" alt=" "></li>
+        <li><img src="../static/img/quemsomos/fotoLuisCarlos.jpg" alt=" "></li>
+        <li><img src="../static/img/quemsomos/Carla-foto.jpg" alt=" "></li>
         <li><img src="../static/img/img1.jpg" alt=" "></li>
         <li><img src="../static/img/img1.jpg" alt=" "></li>
       </ul>
       <div class="apresentacao-equipe-text">
-        <section class="ativo">
-          <h2>
-            Luis Carlos
-          </h2>
-          <p>Estudante de Engenharia de Computação (7/10)
-            Conhecimento e aplicações em programção web, ciência de dados, processamento de imagem e gestão e metodologia ágil.
+        <section>
+          <h2>Luis Carlos</h2>
+          <p>Estudante de Engenharia de Computação na UFC,
+            tenho conhecimento e muito interesse em programção web, ciência de dados, processamento de imagem e gestão e metodologia ágil.
           </p>
+        </section>
+        <section>
+          <h2>Carla Suene</h2>
+          <p>Me chamo Carla Suenne, faço Sistemas e Mídias Digitais pela UFC e sou apaixonada pela área de T.I.
+          <p>
         </section>
         <section>
           <h2>Antônio Ermeson</h2>
@@ -71,13 +72,9 @@
           <h2>Carlos Gutierrez</h2>
           <p>cccccccccccccccccccccccccccc</p>
         </section>
-        <section>
-          <h2>Carla Suene</h2>
-          <p>oooooooooooooooooooooo
-          <p>
-        </section>
       </div>
     </section>
+
 
     <section class="processamento">
       <div class="processamento-parte2">

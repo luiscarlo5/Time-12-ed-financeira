@@ -1,9 +1,13 @@
-{% extends 'projetoVS.html' %} 
+{% extends 'projetoVS.html' %}
 
-  {% block nome_do_conteudo %}
-  <h1>Imagem Enviada</h1>
-  <img class="img-enviada" src="{{ url_for('static', filename='uploads/' + filename) }}" alt="Imagem enviada">
-
+{% block principal-introducao %}
+{% endblock %}
 
 
-  {%  endblock %}
+{% block nome_do_conteudo %}
+<h1>Imagem Enviada</h1>
+<img class="img-enviada" src="{{ url_for('static', filename='uploads/' + filename) }}" alt="Imagem enviada">
+
+
+
+{% endblock %}

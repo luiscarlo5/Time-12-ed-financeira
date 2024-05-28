@@ -1,3 +1,37 @@
+function initTabNav() {
+  const tabButton = document.querySelector('.quem-somos button')
+  const tabContent = document.querySelectorAll('.apresentacao-equipe-text section');
+  const tabImages = document.querySelectorAll('.apresentacao-equipe-img li');
+  let posicao = 0;
+  if (tabButton && tabContent.length && tabImages.length) {
+    tabContent[0].classList.add('ativo');
+    tabImages[0].classList.add('ativo');
+
+    function activeTab(posicao) {
+      tabContent.forEach((section) => {
+        section.classList.remove('ativo');
+      });
+      tabContent[posicao].classList.add('ativo');
+
+      tabImages.forEach((li) => {
+        li.classList.remove('ativo');
+      });
+      tabImages[posicao].classList.add('ativo');
+    }
+
+    tabButton.addEventListener('click', () =>{
+      posicao = (posicao + 1) % tabContent.length; 
+      activeTab(posicao);
+    });
+    //tabMenu.forEach((itemMenu, index) => {
+      //itemMenu.addEventListener('click', () => {
+        //activeTab(index);
+      //});
+    //});
+  }
+}
+document.addEventListener('DOMContentLoaded', initTabNav);
+
 function rolardevagar(sectionId) {
   var section = document.getElementById(sectionId);
   var topPos = section.offsetTop;

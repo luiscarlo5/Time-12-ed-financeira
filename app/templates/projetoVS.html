@@ -26,6 +26,7 @@
     </div>
   </header>
   <main>
+    {% block principal-introducao %}
     <article class="principal_introducao">
       <div class="intro-text">
         <p id="Apres" class="profissao">Desenvolvedores de Software na Educação Financeira</p>
@@ -49,18 +50,24 @@
       </button>
       <ul class="apresentacao-equipe-img">
         <li><img src="{{url_for('static', filename='/img/quemsomos/fotoLuisCarlos.jpg')}}" alt=" "></li>
+        <li><img src="{{url_for('static', filename='/img/quemsomos/Carla-foto.webp')}}" alt=" "></li>
         <li><img src="{{url_for('static', filename='/img/img1.jpg')}}" alt=" "></li>
         <li><img src="{{url_for('static', filename='/img/img1.jpg')}}" alt=" "></li>
-        <li><img src="{{url_for('static', filename='/img/img1.jpg')}}" alt=" "></li>
+
       </ul>
       <div class="apresentacao-equipe-text">
         <section>
           <h2>
             Luis Carlos
           </h2>
-          <p>Estudante de Engenharia de Computação (7/10)
-            Conhecimento e aplicações em programção web, ciência de dados, processamento de imagem e gestão e metodologia ágil.
+          <p>Estudante de Engenharia de Computação na UFC,
+            tenho conhecimento e muito interesse em programção web, ciência de dados, processamento de imagem e gestão e metodologia ágil.
           </p>
+        </section>
+        <section>
+          <h2>Carla Suene</h2>
+          <p>Me chamo Carla Suenne, faço Sistemas e Mídias Digitais pela UFC e sou apaixonada pela área de T.I.
+          <p>
         </section>
         <section>
           <h2>Antônio Ermeson</h2>
@@ -70,14 +77,10 @@
           <h2>Carlos Gutierrez</h2>
           <p>cccccccccccccccccccccccccccc</p>
         </section>
-        <section>
-          <h2>Carla Suene</h2>
-          <p>oooooooooooooooooooooo
-          <p>
-        </section>
+
       </div>
     </section>
-
+    { % endblock %}
 
 
     <section class="processamento">
@@ -165,14 +168,6 @@
         <p>A transformada de wavelet corresponde a uma técnica matemática que divide um sinal ou imagem em diferentes componentes de frequência, permitindo uma representação mais eficiente e compacta da informação. Ela é especialmente útil em processamento de imagem devido à sua capacidade de representar tanto detalhes finos quanto características globais da imagem</p>
       </div>
     </article>
-
-    <article class="principal principal_2">
-      <h1>Meu teste</h1>
-
-
-    </article>
-
-
   </main>
   <footer class="rodape">
     <p>Time 12. Alguns Direitos Reservados.</p>
