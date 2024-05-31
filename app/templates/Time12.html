@@ -10,23 +10,23 @@
 </head>
 
 <body>
+  {% cabecalho %}
   <header class="Cabecalho">
     <div class="fundoinicial">
       <h1 class="titulo">Mandacaru.dev The Twelve</h1>
-
       <nav class="navegador">
         <ul class="menu">
-
           <li><a href="#Apres" onclick="rolardevagar('Apres')">Apresentação</a></li>
-          <li><a href="#f1" onclick="rolardevagar('f1')">Login/Cadastro</a></li>
+          <li><a href="#login" onclick="rolardevagar('f1')">Login/Cadastro</a></li>
           <li><a href="#f2" onclick="rolardevagar('f2')">Funcionalidade 2</a></li>
           <li><a href="#f3" onclick="rolardevagar('f3')">funciionalidade 3</a></li>
         </ul>
       </nav>
     </div>
   </header>
+  {% endblock %}
+  {% block introducao %}
   <main>
-    {% block principal-introducao %}
     <article class="principal_introducao">
       <div class="intro-text">
         <p id="Apres" class="profissao">Desenvolvedores de Software na Educação Financeira</p>
@@ -38,9 +38,8 @@
         <img src="{{url_for('static', filename='/img/img1.jpg')}}" alt=" ">
       </div>
     </article>
-
-
-
+    {% endblock %}
+    {% quem-somos %}
     <section class="quem-somos">
       <h3>Quem somos?</h3>
       <button id="botao-apresentacao-equipe">>
@@ -51,7 +50,7 @@
       <ul class="apresentacao-equipe-img">
         <li><img src="{{url_for('static', filename='/img/quemsomos/fotoLuisCarlos.jpg')}}" alt=" "></li>
         <li><img src="{{url_for('static', filename='/img/quemsomos/Carla-foto.webp')}}" alt=" "></li>
-        <li><img src="{{url_for('static', filename='/img/img1.jpg')}}" alt=" "></li>
+        <li><img src="{{url_for('static', filename='/img/quemsomos/ermeson.jpg')}}" alt=" "></li>
         <li><img src="{{url_for('static', filename='/img/img1.jpg')}}" alt=" "></li>
 
       </ul>
@@ -77,21 +76,18 @@
           <h2>Carlos Gutierrez</h2>
           <p>cccccccccccccccccccccccccccc</p>
         </section>
-
       </div>
     </section>
     { % endblock %}
 
 
+
+    {% block imagem_enviada %}
     <section class="processamento">
       <div class="processamento-parte2">
-        {% block imagem_enviada %}
 
         <h1>Imagem aparecerá abaixo</h1>
         <img class="img-processada" src="{{url_for('static', filename='/files_SAVED/Jesus Superhero.jpg')}}" alt=" ">
-
-        {% endblock %}
-
       </div>
       <div class="processamento-parte1">
         <form class="menu-tec-apr">
@@ -117,6 +113,7 @@
         </form>
       </div>
     </section>
+    {% endblock %}
 
     <div class="processamento-parte3">
       <h1>Adicionar Nomes e Valores</h1>

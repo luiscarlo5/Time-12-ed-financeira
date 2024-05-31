@@ -1,0 +1,111 @@
+.login {
+  display: grid;
+  grid-template-columns: 400px 500px 300px;
+  grid-template-rows: 300px;
+  margin: 0px;
+  margin-left: -100px;
+  padding: 8px;
+
+}
+
+
+/*  memes problema na posição  */
+.meme-1 {
+  grid-row: 1;
+  grid-column: 1;
+  max-width: 200px;
+  margin-left: 10px;
+  width: 200px;
+  border-radius: 30px;
+
+}
+.meme-2 {
+  grid-row: 1;
+  grid-column: 3;
+  width: 100%;
+}
+video{
+  display: block;
+  border-radius: 1500px;
+}
+
+
+/*  formulario  */
+.formulario {
+  display: block;
+  grid-row: 1;
+  grid-column: 2;
+  width: 100%;
+  max-width: 100%;
+  border: solid red;
+  height: 400px;
+}
+
+.formulario p{
+  display: block;
+  font-size: 1.6rem;
+  width: 80%;
+  margin-left: 28px;
+  padding-left: 10px;
+  border-left: solid 12px aqua;
+  border-radius: 50px 0px 0px 50px;
+}
+.formulario label{
+  justify-items: center;
+  text-align: center;
+  width: 100%;
+  margin-left: -5px;
+  padding-left: 3px;
+  font-size: 1.5rem;
+  font-family:'Times New Roman', Times, serif;
+  font-weight: bold;
+  border-left: solid 12px aqua;
+}
+.formulario input {
+  border-radius: 15px 8px;
+  padding: 12px;
+  margin: 12px;
+  font-size: 1.6rem;
+  height: 40px;
+  width: 90%;
+  max-width: 100%;
+  border: solid 2px transparent;
+}
+.formulario .enviar{
+  display: inline;
+  justify-items: center;
+  align-items: center;
+  border-radius: 20px 20px;
+  margin: 10px;
+  width: 70%;
+  height: 52px;
+  margin-left: 10.5%;
+  margin-bottom: 4px;
+  padding: 4px;
+
+  background-color: rgb(255, 255, 255);
+  border: solid 2px aqua;
+  color: rgb(0, 0, 0);
+}
+.formulario input:hover {
+  border: solid 2px aqua;
+}
+
+.formulario .enviar:hover {
+  background-color: aquamarine;
+  color: rgb(19, 136, 231);
+  font-weight: bold;
+  border: solid 5px wheat;
+
+}
+
+@keyframes show {
+  from {
+    opacity: 0.1;
+    transform: translate3d(-30px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}

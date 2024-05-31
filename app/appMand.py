@@ -10,16 +10,38 @@ app = Flask(__name__)
 @app.route('/')
 @app.route('/index')
 def index():
-  return render_template('projetoVS.html')
-
-@app.route('/teste')
-def teste():
-  return render_template('imagemAprimorada.html')
+  return render_template('Time12.html')
 
 
-@app.route('/arquivo/<nome_do_arquivo>', methods=["GET"])
-def get_arquivo(nome_do_arquivo):
-  return send_from_directory(DIRETORIO, nome_do_arquivo, as_attachment=True)
+
+@app.route('/login-registro', methods=['GET','POST'])
+def formulario():
+  if request.method == 'POST':
+    req = request.form
+
+    nome = req['nome']
+    email = req.get('email')
+    senha = request.form['senha']
+
+    print(nome,email,senha)
+
+    return redirect(request.url)
+  
+  return render_template('formulario.html')
+
+@app.route('/formulario', methods=['GET','POST'])
+def formulario():
+  if request.method == 'POST':
+    req = request.form
+
+    nome = req['nome']
+    email = req.get('email')
+    senha = request.form['senha']
+
+    print(nome,email,senha)
+
+    return redirect(request.url)  
+  return render_template('formulario.html')
 
 @app.route('/arquivo', methods=["POST"])
 def post_arquivo():
