@@ -10,52 +10,39 @@ app = Flask(__name__)
 @app.route('/')
 @app.route('/index')
 def index():
-  return render_template('Time12.html')
+  return render_template('InicioTime12.html')
+
+@app.route('/Login')
+def login():
+  # autenticar 
+  # if true  return render_template('Menu.html')
+  # if false  return render_template('Registar.html')
+  return render_template('Menu.html')
+
+@app.route('/regitrar')
+def registrar():
+  # registrar usuario e seus dados de ultimos gastos
+  return render_template('Menu.html')
+
+@app.route('/menu')
+def menu():
+  # redirecionar para
+  # estudo de educação financeira     - Ed-financeira.html
+  # exercícios de ed. fianceira       - quiz.html
+  # gráficos de gastos/investimentos  - visualizadorGrafico.html
+  return render_template('funcionalidadeEscolhida.html')
 
 
+@app.route('/graficos')
+def visualizadorGrafico():
+  # pega dados da página e joga no bd do usuario logado e manda 
+  # para /backend/Criar-Salvar-Grafico.py que salva os graficos 
+  # em /static/imgs_matplotlib
 
-@app.route('/login-registro', methods=['GET','POST'])
-def formulario():
-  if request.method == 'POST':
-    req = request.form
+  # manda o caminho atualizado dos graficos que foram salvos como
+  # imagens .jpg e manda para o template visualizadorGrafico.html
 
-    nome = req['nome']
-    email = req.get('email')
-    senha = request.form['senha']
-
-    print(nome,email,senha)
-
-    return redirect(request.url)
-  
-  return render_template('formulario.html')
-
-@app.route('/formulario', methods=['GET','POST'])
-def formulario():
-  if request.method == 'POST':
-    req = request.form
-
-    nome = req['nome']
-    email = req.get('email')
-    senha = request.form['senha']
-
-    print(nome,email,senha)
-
-    return redirect(request.url)  
-  return render_template('formulario.html')
-
-@app.route('/arquivo', methods=["POST"])
-def post_arquivo():
-  ## parte que nao consegui
-  
-  arquivo = request.files.get('image') # image é o id
-  print(arquivo)
-  nome_do_arquivo = arquivo.filename
-  arquivo.save(os.path.join(DIRETORIO,nome_do_arquivo))
-
-  print(nome_do_arquivo)
-  imagem_url = url_for('static', filename=f'files_SAVED/{nome_do_arquivo}')
-  return render_template('imagemAprimorada.html', imagem_url=nome_do_arquivo)
-    
+  return render_template('visualizadorGrafico.html')
   
 if __name__ == '__main__':
     app.run(debug=True)

@@ -8,18 +8,17 @@
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   color: aquamarine;
   padding: 10px;
-  padding-bottom: 30px;
   margin: 0px;
   margin-top: 150px;
 
   text-align: center;
   align-items: center;
-  height: 240px;
+  height: auto;
   max-width: 100%;
   width: 100%;
   margin-top: 15px;
 
-  border-radius: 10px 35px;
+  border-radius: 40px;
   background-image:url('../img/971.jpg');
   background-size: cover;
   background-position: center;
@@ -42,7 +41,10 @@
 
 .menu {
   display: flex;
-  justify-content: space-between; /* Distribui as tags <a> uniformemente ao longo do contêiner */
+  flex-wrap: wrap;
+  justify-content: space-between; /* Distribui as tags <a> uniformemente ao longo do 
+  contêiner */
+  align-items: center;
   font-weight: bold;
   padding: 30px;
   margin: 0px;
@@ -51,6 +53,9 @@
 }
 
 .menu a {
+  display: flex;
+  flex-wrap: wrap;
+
   font-family: Georgia, 'Times New Roman', Times, serif;
   background-color: aquamarine;
   color:black;
@@ -62,7 +67,7 @@
 }
 
 .menu a:hover {
-  background-color: rgb(8, 160, 109);
+  background-color: rgb(0, 174, 255);
   font-weight: bold; /*deixa negrito*/
 
 }

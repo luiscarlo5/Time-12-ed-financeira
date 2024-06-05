@@ -2,10 +2,10 @@ html {background-image: url(../img/fundoabstrato.jpg);
   background-repeat: repeat;
 }
 body {
-  width: 1100px;
+  display: grid;
+  grid-template-columns: 100%;
   font-family: "Fira Sans", Arial, sans-serif;
-  margin: 0px;
-  margin-left: 150px;
+  margin: 0px 200px 0px 200px;
   color: white;
   align-content:center ;
   
@@ -36,4 +36,32 @@ button {
   padding: 0;
   cursor: pointer;
   border-bottom-style: none;
+}
+
+@media (max-width: 1920px) {
+  body {
+    margin: 0px 210px 0px 210px;
+  }
+}
+@media (max-width: 400px) {
+  body {
+    margin: 0px 10px 0px 0px;
+  }
+}
+
+@media (max-width: 1366px) {
+  body {
+    margin: 0px 133px 0px 133px;
+  }
+}
+
+@media (max-width: 700px) {
+  body {
+    margin: 0px 5px 0px 5px;
+  }
+}
+@media (max-width: 400px) {
+  body {
+    margin: 0px 2px 0px 0px;
+  }
 }
