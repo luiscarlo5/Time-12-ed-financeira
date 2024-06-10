@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv='X-UA-Compatible' content="IE=edge">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/projetoMand.css')}}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.className += ' js';</script>
+  <script src="{{ url_for('static', filename='js/projetoVS.js')}}"></script>
+  <title>Login</title>
+</head>
+
+<body>
+  <header class="Cabecalho">
+    <div class="fundoinicial">
+      <h1 class="titulo">Mandacaru.dev The Twelve</h1>
+      <nav class="navegador">
+        <ul class="menu">
+          <li><a href="{{ url_for('index') }}">Início</a></li>
+          <li><a href="{{ url_for('menu') }}">Menu</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="login">
+    <div class="meme-1">
+      <video width="360" controls autoplay muted loop>
+        <img src="{{ url_for('static', filename='img/img1.jpg')}}" alt=" ">
+
+        <source src="{{ url_for('static', filename='img/memes/gato-beijo.mp4')}}" type="video/mp4" />
+      </video>
+    </div>
+    <div class="meme-2">
+      <video width="360" border-radius="30" controls autoplay muted loop>
+        <source src="{{ url_for('static', filename='img/memes/gato-beijo.mp4')}}" type="video/mp4" />
+      </video>
+    </div>
+    <section class="formulario" action>
+      <!--Prazer em conhece-lo(a) &#128526-->
+      <p>Bem vindo(a) de volta &#128527</p>
+      <form method="POST">
+        <label>Nome:</label><br>
+        <input type="text" name="nome" required><br>
+        <label>CPF:</label><br>
+        <input type="cpf" name="CPF" required><br>
+        <label>Senha:</label><br>
+        <input type="password" name="senha" required><br>
+        <input class="enviar" type="submit" value="Login">
+      </form>
+    </section>
+  </div>
+
+  <footer class="rodape">
+    <p>Time 12. Alguns Direitos Reservados.</p>
+  </footer>
+</body>
+
+</html>

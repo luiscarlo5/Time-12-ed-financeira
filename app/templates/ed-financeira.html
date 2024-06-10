@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv='X-UA-Compatible' content="IE=edge">
+    <link rel="stylesheet" href="../static/css/projetoMand.css">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/projetoMand.css')}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>document.documentElement.className += ' js';</script>
+    <script src="{{ url_for('static', filename='js/projetoMand.js')}}"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Princípios de Educação Financeira</title>
+  </head>
+
+<body>
+
+  <header class="Cabecalho">
+    <div class="fundoinicial">
+      <h1 class="titulo">The Twelve - Área Quiz</h1>
+      <nav class="navegador">
+        <ul class="menu">
+          <li><a href="{{ url_for('menu') }}" onclick="rolardevagar('Apres')">Ir ao menu Menu</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="ed-finaceira">
+    <h1>Princípios de Educação Financeira</h1>
+
+    <div class="principle" id="orcamento">
+      <h2>1. Orçamento</h2>
+      <p>O planejamento de receitas e despesas é essencial para controlar o fluxo de caixa e garantir que os gastos não superem os ganhos.</p>
+      <p>Manter um orçamento ajuda a identificar onde seu dinheiro está sendo gasto e permite fazer ajustes para economizar e investir mais.</p>
+      <div class="example">
+        <p>Exemplo: Se você ganha R$ 3.000 por mês, deve listar todas as despesas fixas (como aluguel de R$ 1.000, contas de R$ 500) e variáveis (como lazer e alimentação de R$ 800). Assim, controla os gastos e evita endividamento.</p>
+      </div>
+    </div>
+
+    <div class="principle" id="poupanca">
+      <h2>2. Poupança</h2>
+      <p>Guardar uma parte da renda para objetivos futuros, emergências ou investimentos é crucial para a saúde financeira.</p>
+      <p>Ter uma reserva financeira proporciona segurança e tranquilidade, permitindo lidar com imprevistos sem comprometer o orçamento.</p>
+      <div class="example">
+        <p>Exemplo: Reservar 10% do salário, ou R$ 300 por mês, em uma conta poupança pode ajudar a formar uma reserva de emergência.</p>
+      </div>
+    </div>
+
+    <div class="principle" id="investimentos">
+      <h2>3. Investimentos</h2>
+      <p>A aplicação de dinheiro em ativos financeiros ou reais visa obter rendimentos futuros. Isso inclui conceitos como diversificação, risco e retorno.</p>
+      <p>Investir de forma inteligente pode aumentar seu patrimônio ao longo do tempo e ajudar a atingir metas financeiras de longo prazo.</p>
+      <div class="example">
+        <p>Exemplo: Investir R$ 1.000 em ações pode gerar retornos superiores à poupança, mas com maior risco. Diversificar investimentos em ações, títulos e imóveis reduz riscos.</p>
+      </div>
+    </div>
+
+    <div class="principle" id="divida">
+      <h2>4. Dívida</h2>
+      <p>Compreender as diferentes formas de dívida (boas e ruins), taxas de juros, prazos de pagamento e impacto no orçamento é fundamental.</p>
+      <p>Gerir as dívidas de forma eficaz pode evitar problemas financeiros graves e manter suas finanças sob controle.</p>
+      <div class="example">
+        <p>Exemplo: Dívidas boas, como um financiamento imobiliário com taxa baixa, ajudam a adquirir patrimônio. Dívidas ruins, como o uso excessivo de cartão de crédito com juros altos, devem ser evitadas.</p>
+      </div>
+    </div>
+
+    <div class="principle" id="planejamento-financeiro">
+      <h2>5. Planejamento Financeiro</h2>
+      <p>A definição de metas financeiras de curto, médio e longo prazo e a elaboração de um plano para alcançá-las são vitais para o sucesso financeiro.</p>
+      <p>Um bom planejamento financeiro permite realizar sonhos e objetivos de vida de maneira organizada e eficaz.</p>
+      <div class="example">
+        <p>Exemplo: Planejar uma viagem internacional de R$ 10.000 em dois anos requer economizar R$ 416 por mês.</p>
+      </div>
+    </div>
+
+    <div class="principle" id="renda">
+      <h2>6. Renda</h2>
+      <p>Compreender as diferentes fontes de renda e estratégias para aumentá-la, seja por meio de trabalho, investimentos ou outras atividades, é importante para a estabilidade financeira.</p>
+      <p>Diversificar as fontes de renda pode proporcionar maior segurança e potencial de crescimento financeiro.</p>
+      <div class="example">
+        <p>Exemplo: Além do salário, pode-se obter renda extra com freelancing, aluguel de um imóvel ou investimentos que gerem dividendos.</p>
+      </div>
+    </div>
+
+    <div class="principle" id="gestao-de-riscos">
+      <h2>7. Gestão de Riscos</h2>
+      <p>Identificar e mitigar riscos financeiros, como seguros, para proteger contra imprevistos é essencial.</p>
+      <p>Uma boa gestão de riscos pode prevenir perdas significativas e garantir que você esteja preparado para situações inesperadas.</p>
+      <div class="example">
+        <p>Exemplo: Contratar um seguro de saúde ou de automóvel previne prejuízos financeiros em caso de doenças ou acidentes.</p>
+      </div>
+    </div>
+
+    <div class="principle" id="impostos">
+      <h2>8. Impostos</h2>
+      <p>Conhecer o sistema tributário e como otimizar a carga tributária dentro da legalidade pode resultar em economia significativa.</p>
+      <p>Entender os impostos que você paga permite um planejamento financeiro mais preciso e eficiente.</p>
+      <div class="example">
+        <p>Exemplo: Investir em um plano de previdência privada (PGBL) pode proporcionar dedução no Imposto de Renda.</p>
+      </div>
+    </div>
+
+    <div class="principle" id="consumo-consciente">
+      <h2>9. Consumo Consciente</h2>
+      <p>Avaliar criticamente os hábitos de consumo e a importância de viver dentro das possibilidades financeiras é fundamental para evitar dívidas e manter a saúde financeira.</p>
+      <p>Praticar o consumo consciente ajuda a priorizar o que realmente importa e a evitar compras impulsivas.</p>
+      <div class="example">
+        <p>Exemplo: Evitar compras impulsivas e preferir produtos duráveis ajuda a manter o orçamento em dia. Esperar por promoções ou comprar produtos de segunda mão pode economizar dinheiro.</p>
+      </div>
+    </div>
+
+    <div class="principle" id="educacao-aposentadoria">
+      <h2>10. Educação e Planejamento para a Aposentadoria</h2>
+      <p>Preparar-se financeiramente para a aposentadoria, incluindo poupança e investimentos específicos para essa fase da vida, é essencial para garantir uma vida tranquila e confortável no futuro.</p>
+      <p>Planejar a aposentadoria desde cedo permite acumular um patrimônio suficiente para manter seu padrão de vida após a aposentadoria.</p>
+      <div class="example">
+        <p>Exemplo: Investir em um fundo de previdência privada ou aplicar mensalmente em um plano de aposentadoria permite acumular recursos para manter o padrão de vida após a aposentadoria.</p>
+      </div>
+    </div>
+  </div>
+  <footer class="rodape">
+    <p>Time 12. Alguns Direitos Reservados.</p>
+  </footer>
+</body>
+
+</html>

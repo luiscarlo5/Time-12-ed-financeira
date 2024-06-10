@@ -1,0 +1,53 @@
+.grafico {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f5f5f5;
+}
+.grafico h1 {
+  text-align: center;
+}
+.grafico .container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.grafico .form-container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+.grafico .form-container form {
+  display: flex;
+  flex-direction: column;
+}
+.grafico .form-container label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.grafico .form-container input[type="number"], 
+.form-container input[type="text"] {
+  margin-bottom: 15px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+.grafico .form-container input[type="submit"], 
+.form-container button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+.grafico .form-container input[type="submit"]:hover, 
+.grafico .form-container button:hover {
+  background-color: #45a049;
+}
+.grafico .form-container button {
+  margin-bottom: 15px;
+}

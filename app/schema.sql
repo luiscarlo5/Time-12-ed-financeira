@@ -1,0 +1,31 @@
+DROP TABLE IF EXISTS usuario;
+DROP TABLE IF EXISTS dados_usuarios;
+
+CREATE TABLE usuario (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  username TEXT UNIQUE NOT NULL,
+  cpf TEXT UNIQUE NOT NULL,
+  password TEXT NOT NULL
+);
+
+CREATE TABLE dados_usuario_pessoal;(
+  id_dados INTEGER PRIMARY KEY AUTOINCREMENT,
+  username TEXT UNIQUE NOT NULL,
+  created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  title TEXT NOT NULL,
+  body TEXT NOT NULL,
+  FOREIGN KEY (dados) REFERENCES user (id)
+);
+
+CREATE TABLE financas (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  usuario_id INTEGER,
+  ano INTEGER NOT NULL,
+  mes INTEGER NOT NULL,
+  custo_fixo REAL NOT NULL,
+  custo_variavel REAL NOT NULL,
+  lucro_total REAL NOT NULL,
+  FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
+);
+
+

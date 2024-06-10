@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv='X-UA-Compatible' content="IE=edge">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/projetoMand.css')}}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.className += ' js';</script>
+  <script src="{{ url_for('static', filename='js/projetoMand.js')}}"></script>
+  <title>Time 12</title>
+</head>
+
+<body>
+  <header class="Cabecalho">
+    <div class="fundoinicial">
+      <h1 class="titulo">The Twelve - Área Quiz</h1>
+      <nav class="navegador">
+        <ul class="menu">
+          <li><a href="{{ url_for('menu') }}" onclick="rolardevagar('Apres')">Ir ao menu Menu</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section class="quiz">
+    <h1>Quiz de Educação Financeira</h1>
+    <p class="topicos">Tópicos:
+      Orçamento - Poupança - Investimento - Dívida - Planejamento Financeiro - Renda - Gestão de Riscos - Impostos - Consumo Consciente - Educação e Planejamento para a Aposentadoria
+    </p>
+
+    <div class="aux1">
+      <button href="#topico" class="button1" onclick="rolardevagar('topico')">Próximo Tópico >></button>
+    </div>
+    <div class="aux2">
+      <button class="button2">Próxima Pergunta ></button>
+    </div>
+    <div id="topico" class="questions">
+      <main> <!--Topico 1-->
+        <h2>Orçamento</h2>
+        <article>
+          <p>Pergunta 1: Como criar um orçamento eficiente?</p>
+          <button onclick="checkAnswer('certo')">a) Fazer uma lista mensal de todas as receitas e despesas.</button>
+          <button onclick="checkAnswer('erro')">b) Controlar apenas as despesas maiores.</button>
+          <button onclick="checkAnswer('erro')">c) Anotar receitas esporádicas e esquecer as fixas.</button>
+          <section class="resposta">
+            <div>
+              <ul class="resposta--">
+                <li class="texto">
+                  <p>EXCELENTE</p>
+                  <p>Resposta correta!</p>
+                </li>
+                <li class="video-resposta">
+                  <video class="video-acertou" autoplay muted controls loop>
+                    <source src="{{ url_for('static', filename='img/memes/sorrisooculos.mp4')}}" type="video/mp4">
+                  </video>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <ul class="resposta--">
+                <li class="texto">
+                  <p>Próxima vez tenta D de Deus</p>
+                </li>
+                <li class="video-resposta">
+                  <video class="video-errou" autoplay muted controls loop>
+                    <source src="{{ url_for('static', filename='img/memes/felizparapreocupado.mp4')}}" type="video/mp4">
+                  </video>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </article>
+
+        <article>
+          <p>Pergunta 2: Que atitude gera uma saúde econômica no orçamento de uma pessoa?</p>
+          <button onclick="checkAnswer('erro')">a) Manter todas as despesas inalteradas.</button>
+          <button onclick="checkAnswer('erro')">b) Aumentar o gasto em itens de lazer.</button>
+          <button onclick="checkAnswer('certo')">c) Classificar despesas em essenciais e supérfluas e cortar os supérfluos.</button>
+
+          <section class="resposta">
+            <div>
+
+              <ul class="resposta--">
+                <li class="texto">
+                  <p>Resposta correta! O menino(a) é bom</p>
+                </li>
+                <li class="video-resposta">
+                  <video class="video-acertou" autoplay muted controls loop>
+                    <source src="{{ url_for('static', filename='img/memes/bonecoroxo.mp4')}}" type="video/mp4">
+                  </video>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <ul class="resposta--">
+                <li class="texto">
+                  <p>Calma rapaz na próxima</p>
+                </li>
+                <li class="video-resposta">
+                  <video class="video-errou" autoplay muted controls loop>
+                    <source src="{{ url_for('static', filename='img/memes/macaco.mp4') }}" type="video/mp4">
+                  </video>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+        </article>
+        <article>
+          <p>Pergunta 3: Que atitude possue mais precaução sobre orçamento?</p>
+          <button onclick="checkAnswer('certo')">a) Revisar o orçamento mensalmente e ajustar conforme necessário.</button>
+          <button onclick="checkAnswer('erro')">b) Fazer o orçamento uma vez por ano sem revisões.</button>
+          <button onclick="checkAnswer('erro')">c) Ajustar o orçamento apenas quando surgir uma emergência.</button>
+          <section class="resposta">
+            <div>
+              <ul class="resposta--">
+                <li class="texto">
+                  <p>Parábens!!</p>
+                  <p>resposta correta</p>
+                </li>
+                <li class="video-resposta">
+                  <video class="video-acertou" autoplay muted controls loop>
+                    <source src="{{ url_for('static', filename='img/memes/preguicafeliz.mp4')}}" type="video/mp4">
+                  </video>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <ul class="resposta--">
+                <li class="texto">
+                  <p>Parábens</p>
+                  <p>pois os erros te deixam mais forte</p>
+                </li>
+                <li class="video-resposta">
+                  <video class="video-errou" autoplay muted controls loop>
+                    <source src="{{ url_for('static', filename='img/memes/felizparapreocupado.mp4')}}" type="video/mp4">
+                  </video>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </article>
+      </main>
+      <main>
+        <!-- Tópico 2 -->
+        <h2>Poupança</h2>
+        <article>
+          <p>Pergunta 1: Qual é a importância da poupança?</p>
+          <button onclick="checkAnswer('erro', this)">a) Usar a poupança para compras impulsivas.</button>
+          <button onclick="checkAnswer('erro', this)">b) Guardar dinheiro sem objetivo específico.</button>
+          <button onclick="checkAnswer('certo', this)">c) Ter dinheiro disponível para emergências financeiras.</button>
+
+          <section class="resposta">
+            <div>
+              <ul class="resposta--">
+                <li class="texto">
+                  <p>Bem dmais</p>
+                </li>
+                <li class="video-resposta">
+                  <video class="video-acertou" autoplay muted controls loop>
+                    <source src="{{ url_for('static', filename='img/memes/homemimpressionado.mp4')}}" type="video/mp4">
+                  </video>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <ul class="resposta--">
+                <li class="texto">
+                  <p>Errou foi, bixo sabido?</p>
+                </li>
+                <li class="video-resposta">
+                  <video class="video-errou" autoplay muted controls loop>
+                    <source src="{{ url_for('static', filename='img/memes/deboche.mp4')}}" type="video/mp4">
+                  </video>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </article>
+        <article>
+          <p>Pergunta 2: Qual pensamento sobre poupança é o melhor?</p>
+          <button onclick="checkAnswer('erro', this)">a) Usar todo o dinheiro da poupança em viagens anuais.</button>
+          <button onclick="checkAnswer('certo', this)">b) Economizar para grandes compras, como um carro ou casa.</button>
+          <button onclick="checkAnswer('erro', this)">c) Não planejar o uso do dinheiro poupado.</button>
+          <section class="resposta">
+            <div>
+              <ul class="resposta--">
+                <li class="texto">
+                  <p>Quem é voçê? o Elon Musk? Acertou!!</p>
+                </li>
+                <li class="video-resposta">
+                  <video class="video-acertou" autoplay muted controls loop>
+                    <source src="{{ url_for('static', filename='img/memes/pernalonga.mp4')}}" type="video/mp4">
+                  </video>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <ul class="resposta--">
+                <li class="texto">
+                  <p>Voçê esta muito bem... bem mal</p>
+                </li>
+                <li class="video-resposta">
+                  <video class="video-errou" autoplay muted controls loop>
+                    <source src="{{ url_for('static', filename='img/memes/cachorroconstrangido.mp4')}}" type="video/mp4">
+                  </video>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </article>
+        <article>
+          <p>Pergunta 3: Como poupar mais?</p>
+          <button onclick="checkAnswer('certo', this)">a) Poupar regularmente para ter uma segurança financeira no futuro.</button>
+          <button onclick="checkAnswer('erro', this)">b) Poupar esporadicamente sem metas claras.</button>
+          <button onclick="checkAnswer('erro', this)">c) Gastar todo o dinheiro assim que receber.</button>
+          <section class="resposta">
+            <div>
+              <ul class="resposta--">
+                <li class="texto">
+                  <p>Parabéns!! muito inteligente</p>
+                </li>
+                <li class="video-resposta">
+                  <video class="video-acertou" autoplay muted controls loop>
+                    <source src="{{ url_for('static', filename='img/memes/therockolhao.mp4')}}" type="video/mp4">
+                  </video>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <ul class="resposta--">
+                <li class="texto">
+                  <p>Parabéns</p>
+                  <p>pois os erros te deixam mais forte</p>
+                </li>
+                <li class="video-resposta">
+                  <video class="video-errou" autoplay muted controls loop>
+                    <source src="{{ url_for('static', filename='img/memes/felizparapreocupado.mp4')}}" type="video/mp4">
+                  </video>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </article>
+      </main>
+      <main><!-- Tópico 3 -->
+
+        <h2>Investimentos</h2>
+        <article>
+          <p>Pergunta 1: Quais são os benefícios de diversificar os investimentos?</p>
+          <button onclick="checkAnswer('erro', this)">a) Colocar todo o dinheiro em um único investimento de alto risco.</button>
+          <button onclick="checkAnswer('erro', this)">b) Investir apenas em poupança.</button>
+          <button onclick="checkAnswer('certo', this)">c) Investir em diferentes tipos de ativos para minimizar riscos.</button>
+
+          <section class="resposta">
+            <div>
+              <ul class="resposta--">
+                <li class="texto">
+                  <p>EXCELENTE</p>
+                  <p>Resposta correta!</p>
+                </li>
+                <li class="video-resposta">
+                  <video class="video-acertou" autoplay muted controls loop>
+                    <source src="{{ url_for('static', filename='img/memes/sorrisooculos.mp4')}}" type="video/mp4">
+                  </video>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <ul class="resposta--">
+                <li class="texto">
+                  <p>Era C de Cristo, faltou fé aí</p>
+                </li>
+                <li class="video-resposta">
+                  <video class="video-errou" autoplay muted controls loop>
+                    <source src="{{ url_for('static', filename='img/memes/orando.mp4')}}" type="video/mp4">
+                  </video>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </article>
+        <article>
+          <p>Pegunta 2: Qual escolha é a melhor sobre decisões financeiras?</p>
+          <button onclick="checkAnswer('certo', this)">a) Diversificar para equilibrar entre risco e retorno.</button>
+          <button onclick="checkAnswer('erro', this)">b) Buscar sempre os investimentos de maior retorno, independentemente do risco.</button>
+          <button onclick="checkAnswer('erro', this)">c) Manter o dinheiro em uma conta corrente sem rendimentos.</button>
+          <section class="resposta">
+            <div>
+              <ul class="resposta--">
+                <li class="texto">
+                  <p>É isso aí meu chapa</p>
+                </li>
+                <li class="video-resposta">
+                  <video class="video-acertou" autoplay muted controls loop>
+                    <source src="{{ url_for('static', filename='img/memes/bebedance.mp4')}}" type="video/mp4">
+                  </video>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <ul class="resposta--">
+                <li class="texto">
+                  <p>Erre mais não, por favor!</p>
+                </li>
+                <li class="video-resposta">
+                  <video class="video-errou" autoplay muted controls loop>
+                    <source src="{{ url_for('static', filename='img/memes/bbcomsono.mp4')}}" type="video/mp4">
+                  </video>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </article>
+        <article>
+          <p>Pergunta 3: Qual o certo sobre este tópico?</p>
+          <button onclick="checkAnswer('erro', this)">a) Focar apenas em ações de uma
+            única empresa.</button>
+          <button onclick="checkAnswer('certo', this)">b) Investir em diversas classes de ativos para aproveitar diferentes oportunidades.</button>
+          <button onclick="checkAnswer('erro', this)">c) Evitar investimentos em mercados novos ou desconhecidos.</button>
+          <section class="resposta">
+            <div>
+              <ul class="resposta--">
+                <li class="texto">
+                  <p>Calma aí investidor(a), acerta muito</p>
+                </li>
+                <li class="video-resposta">
+                  <video class="video-acertou" autoplay muted controls loop>
+                    <source src="{{ url_for('static', filename='img/memes/homemimpressionado.mp4')}}" type="video/mp4">
+                  </video>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <ul class="resposta--">
+                <li class="texto">
+                  <p>Nãaooooo</p>
+                </li>
+                <li class="video-resposta">
+                  <video class="video-errou" autoplay muted controls loop>
+                    <source src="{{ url_for('static', filename='img/memes/vergonhaalheia.mp4')}}" type="video/mp4">
+                  </video>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </article>
+      </main>
+      <main><!--Topico 4-->
+        <h2>Dívidas</h2>
+        <article>
+          <p>Pergunta 1: Como entender e gerenciar dívidas?</p>
+          <button onclick="checkAnswer('erro')">b) Considerar todas as dívidas como ruins.</button>
+          <button onclick="checkAnswer('certo')">c) Diferenciar entre dívidas boas (como financiamento imobiliário) e ruins (como cartões de crédito).</button>
+          <button onclick="checkAnswer('erro')">c) Ignorar o tipo de dívida e focar apenas no valor total.</button>
+          <section class="resposta">
+            <div>
+              <ul class="resposta--">
+                <li class="texto">
+                  <p>EXCELENTE</p>
+                  <p>Resposta correta!</p>
+                </li>
+                <li class="video-resposta">
+                  <video class="video-acertou" autoplay muted controls loop>
+                    <source src="{{ url_for('static', filename='img/memes/ovelhafeliz.mp4')}}" type="video/mp4">
+                  </video>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <ul class="resposta--">
+                <li class="texto">
+                  <p>Simmmmmm, voçê errou!!</p>
+                </li>
+                <li class="video-resposta">
+                  <video class="video-errou" autoplay muted controls loop>
+                    <source src="{{ url_for('static', filename='img/memes/felizparapreocupado.mp4')}}" type="video/mp4">
+                  </video>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </article>
+        <article>
+          <p>Pergunta 2: Como agir melhor sobre suas dívidas com juros?</p>
+          <button onclick="checkAnswer('erro')">a) Pagar todas as dívidas de forma igual, independentemente da taxa de juros.</button>
+
+          <button onclick="checkAnswer('erro')">b) Não considerar as taxas de juros ao
+            pagar dívidas.</button>
+          <button onclick="checkAnswer('certo')">c) Priorizar o pagamento de dívidas com juros mais altos.</button>
+
+
+          <section class="resposta">
+            <div>
+              <ul class="resposta--">
+                <li class="texto">
+                  <p>Resposta correta! O menino(a) é bom</p>
+                </li>
+                <li class="video-resposta">
+                  <video class="video-acertou" autoplay muted controls loop>
+                    <source src="{{ url_for('static', filename='img/memes/bonecoroxo.mp4')}}" type="video/mp4">
+                  </video>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <ul class="resposta--">
+                <li class="texto">
+                  <p>Queria acertar era? rsrs</p>
+                </li>
+                <li class="video-resposta">
+                  <video class="video-errou" autoplay muted controls loop>
+                    <source src="{{ url_for('static', filename='img/memes/cachorrorindo.mp4')}}" type="video/mp4">
+                  </video>
+
+                </li>
+              </ul>
+            </div>
+          </section>
+        </article>
+
+        <article>
+          <p>Pergunta 3: Qual meljor ação?/p>
+            <button onclick="checkAnswer('certo')">a) Estabelecer um plano de pagamento regular para quitar as dívidas.</button>
+            <button onclick="checkAnswer('erro')">b) Pagar dívidas apenas quando sobrar dinheiro.</button>
+            <button onclick="checkAnswer('erro')">c) Deixar as dívidas acumularem sem um plano claro.</button>
+          <section class="resposta">
+            <div>
+              <ul class="resposta--">
+                <li class="texto">
+                  <p>Parábens!!</p>
+                  <p>resposta correta</p>
+                </li>
+                <li class="video-resposta">
+                  <video class="video-acertou" autoplay muted controls loop>
+                    <source src="{{ url_for('static', filename='img/memes/preguicafeliz.mp4')}}" type="video/mp4">
+                  </video>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <ul class="resposta--">
+                <li class="texto">
+                  <p>"Parábens"</p>
+                  <p>pois os erros te deixam mais forte</p>
+                </li>
+                <li class="video-resposta">
+                  <video class="video-errou" autoplay muted controls loop>
+                    <source src="{{ url_for('static', filename='img/memes/deboche.mp4')}}" type="video/mp4">
+                  </video>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </article>
+      </main>
+      <main> <!--Topico 5-->
+
+        <h2>Planejamento Financeiro</h2>
+        <article>
+          <p>Pergunta 1: Qual a importância do planejamento financeiro?</p>
+          <button onclick="checkAnswer('erro')">a) Não definir metas específicas.</button>
+          <button onclick="checkAnswer('erro')">b) Apenas pensar em metas de curto prazo.</button>
+          <button onclick="checkAnswer('certo')">c) Estabelecer metas de curto, médio e longo prazo.</button>
+
+          <section class="resposta">
+            <div>
+              <ul class="resposta--">
+                <li class="texto">
+                  <p>Isso! Isso! Isso!</p>
+                </li>
+                <li class="video-resposta">
+                  <video class="video-acertou" autoplay muted controls loop>
+                    <source src="{{ url_for('static', filename='img/memes/pedropedropedro.mp4')}}" type="video/mp4">
+                  </video>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <ul class="resposta--">
+                <li class="texto">
+                  <p>Não! força guerreiro(a)</p>
+                </li>
+                <li class="video-resposta">
+                  <video class="video-errou" autoplay muted controls loop>
+                    <source src="{{ url_for('static', filename='img/memes/macaco.mp4')}}" type="video/mp4">
+                  </video>
+
+                </li>
+              </ul>
+            </div>
+          </section>
+        </article>
+
+        <article>
+          <p>Pergunta 2: Que atitute melhora o planejamento financeiro?</p>
+          <button onclick="checkAnswer('certo')">a) Revisar e ajustar o plano financeiro periodicamente.</button>
+          <button onclick="checkAnswer('erro')">b) Criar o plano e nunca revisá-lo.</button>
+          <button onclick="checkAnswer('erro')">c) Ajustar o plano apenas em casos de emergência.</button>
+          <section class="resposta">
+            <div>
+              <ul class="resposta--">
+                <li class="texto">
+                  <p>EXCELENTE!!</p>
+                  <p>Resposta correta! O menino(a) é bom</p>
+                </li>
+                <li class="video-resposta">
+                  <video class="video-acertou" autoplay muted controls loop>
+                    <source src="{{ url_for('static', filename='img/memes/bonecoroxo.mp4')}}" type="video/mp4">
+                  </video>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <ul class="resposta--">
+                <li class="texto">
+                  <p>Nãooo é Assim</p>
+                </li>
+                <li class="video-resposta">
+                  <video class="video-errou" autoplay muted controls loop>
+                    <source src="{{ url_for('static', filename='img/memes/macaco.mp4')}}" type="video/mp4">
+                  </video>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </article>
+
+        <article>
+          <p>Pergunta 3: Qual a melhor ideia sobre planejamento financeiro?</p>
+          <button onclick="checkAnswer('erro')">a) Manter o plano inalterado independentemente das circunstâncias.</button>
+          <button onclick="checkAnswer('certo')">b) Adaptar o plano às mudanças na renda e nas despesas.</button>
+
+          <button onclick="checkAnswer('erro')">c) Ajustar o plano apenas em caso de grandes mudanças.</button>
+          <section class="resposta">
+            <div>
+              <ul class="resposta--">
+                <li class="texto">
+                  <p>AAAEEEHH é do Brasiiiil</p>
+                </li>
+                <li class="video-resposta">
+                  <video class="video-acertou" autoplay muted controls loop>
+                    <source src="{{ url_for('static', filename='img/memes/titeCaindo.mp4')}}" type="video/mp4">
+                  </video>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <ul class="resposta--">
+                <li class="texto">
+                  <p>Errou</p>
+                  <p>Assim não amiguinhu</p>
+                </li>
+                <li class="video-resposta">
+                  <video class="video-errou" autoplay muted controls loop>
+                    <source src="{{ url_for('static', filename='img/memes/vergonhaalheia.mp4')}}" type="video/mp4">
+                  </video>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </article>
+      </main>
+      <main> <!-- topico 6 -->
+        <h2>Renda e Diversificação</h2>
+        <article>
+          <p>Pergunta 1: Como aumentar e diversificar e a renda?</p>
+          <button onclick="checkAnswer('erro')">a) Depender apenas do salário fixo.</button>
+          <button onclick="checkAnswer('certo')">b) Explorar trabalhos freelancers ou projetos paralelos.</button>
+          <button onclick="checkAnswer('erro')">c) Evitar buscar novas oportunidades de renda.</button>
+          <section class="resposta">
+            <div>
+              <ul class="resposta--">
+                <li class="texto">
+                  <p>AAAEEEE</p>
+                  <p>parabéns, você acertou mais uma vez</p>
+                </li>
+                <li class="video-resposta">
+                  <video class="video-acertou" autoplay muted controls loop>
+                    <source src="{{ url_for('static', filename='img/memes/pedropedropedro.mp4')}}" type="video/mp4">
+                  </video>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <ul class="resposta--">
+                <li class="texto">
+                  <p>Calma que errar é humano</p>
+                </li>
+                <li class="video-resposta">
+                  <video class="video-errou" autoplay muted controls loop>
+                    <source src="{{ url_for('static', filename='img/memes/felizparapreocupado.mp4')}}" type="video/mp4">
+                  </video>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </article>
+        <article>
+          <p>Pergunta 2: Sobre educação e investimentos, responda.</p>
+          <button onclick="checkAnswer('erro')">a) Não investir em educação ou treinamento adicional.</button>
+          <button onclick="checkAnswer('erro')">b) Focar apenas nas habilidades atuais.</button>
+          <button onclick="checkAnswer('certo')">c) Aprender novas habilidades que possam aumentar o valor profissional.</button>
+
+          <section class="resposta">
+            <div>
+              <ul class="resposta--">
+                <li class="texto">
+                  <p>EXCELENTE</p>
+                  <p>Resposta correta!</p>
+                </li>
+                <li class="video-resposta">
+                  <video class="video-acertou" autoplay muted controls loop>
+                    <source src="{{ url_for('static', filename='img/memes/bebedance.mp4')}}" type="video/mp4">
+                  </video>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <ul class="resposta--">
+                <li class="texto">
+                  <p>Me ajuda a te ajudar</p>
+                </li>
+                <li class="video-resposta">
+                  <video class="video-errou" autoplay muted controls loop>
+                    <source src="{{ url_for('static', filename='img/memes/macaco.mp4')}}" type="video/mp4">
+                  </video>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </article>
+        <article>
+          <p>Pergunta 3: O que fazer sobre investimentos.</p>
+          <button onclick="checkAnswer('certo')">a) Investir em diferentes ativos financeiros para gerar renda passiva.</button>
+          <button onclick="checkAnswer('erro')">b) Evitar investimentos e focar apenas no trabalho.</button>
+          <button onclick="checkAnswer('erro')">c) Colocar todo o dinheiro em um único tipo de investimento.</button>
+          <section class="resposta">
+            <div>
+              <ul class="resposta--">
+                <li class="texto">
+                  <p>Você esta deveras formidável hoje, Congratulaitions</p>
+                </li>
+                <li class="video-resposta">
+                  <video class="video-acertou" autoplay muted controls loop>
+                    <source src="{{ url_for('static', filename='img/memes/preguicafeliz.mp4')}}" type="video/mp4">
+                  </video>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <ul class="resposta--">
+                <li class="texto">
+                  <p>Parabéns</p>
+                  <p>pois os erros te deixam mais forte</p>
+                </li>
+                <li class="video-resposta">
+                  <video class="video-errou" autoplay muted controls loop>
+                    <source src="{{ url_for('static', filename='img/memes/felizparapreocupado.mp4')}}" type="video/mp4">
+                  </video>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </article>
+      </main>
+      <main><!-- topico 7 -->
+        <h2>Gestão de Riscos</h2>
+        <article>
+          <p>Pergunta 1: Qual a importância da gestão de riscos?</p>
+          <button onclick="checkAnswer('certo')">a) Adquirir seguros adequados, como de saúde e automóvel.</button>
+          <button onclick="checkAnswer('erro')">b) Ignorar seguros e confiar na sorte.</button>
+          <button onclick="checkAnswer('erro')">c) Adquirir apenas o seguro mais barato, sem considerar a cobertura.</button>
+          <section class="resposta">
+            <div>
+              <ul class="resposta--">
+                <li class="texto">
+                  <p>Booa meu nobre</p>
+                </li>
+                <li class="video-resposta">
+                  <video class="video-acertou" autoplay muted controls loop>
+                    <source src="{{ url_for('static', filename='img/memes/sorrisooculos.mp4')}}" type="video/mp4">
+                  </video>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <ul class="resposta--">Calma calabreso, mas atenção na próxima</p>
+                </li>
+                <li class="video-resposta">
+                  <video class="video-errou" autoplay muted controls loop>
+                    <source src="{{ url_for('static', filename='img/memes/felizparapreocupado.mp4')}}" type="video/mp4">
+                  </video>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </article>
+        <article>
+          <p>Pergunta 2: Como e onde investir?</p>
+          <button onclick="checkAnswer('erro')">a) Colocar todo o dinheiro em um único investimento de alto risco.</button>
+          <button onclick="checkAnswer('erro')">b) Manter o dinheiro parado, sem investir.</button>
+          <button onclick="checkAnswer('certo')">c) Investir em diferentes ativos para reduzir o risco de grandes perdas.</button>
+
+          <section class="resposta">
+            <div>
+              <ul class="resposta--">
+                <li class="texto">
+                  <p>EXCELENTE</p>
+                  <p>Resposta correta!</p>
+                </li>
+                <li class="video-resposta">
+                  <video class="video-acertou" autoplay muted controls loop>
+                    <source src="{{ url_for('static', filename='img/memes/ovelhafeliz.mp4')}}" type="video/mp4">
+                  </video>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <ul class="resposta--">
+                <li class="texto">
+                  <p>Próxima vez tenta D de Deus</p>
+                </li>
+                <li class="video-resposta">
+                  <video class="video-errou" autoplay muted controls loop>
+                    <source src="{{ url_for('static', filename='img/memes/macaco.mp4')}}" type="video/mp4">
+                  </video>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </article>
+        <article>
+          <p>Pergunta 3: O que fazer com o seu dinheiro?</p>
+          <button onclick="checkAnswer('certo')">a) Manter uma reserva de emergência suficiente para cobrir despesas por alguns meses.</button>
+          <button onclick="checkAnswer('erro')">b) Usar todo o dinheiro disponível para investimentos de longo prazo.</button>
+          <button onclick="checkAnswer('erro')">c) Não manter nenhuma reserva de emergência.</button>
+          <section class="resposta">
+            <div>
+              <ul class="resposta--">
+                <li class="texto">
+                  <p>Parabéns!!</p>
+                  <p>Resposta correta! Manter uma reserva de emergência suficiente para cobrir despesas por alguns meses.</p>
+                </li>
+                <li class="video-resposta">
+                  <video class="video-acertou" autoplay muted controls loop>
+                    <source src="{{ url_for('static', filename='img/memes/preguicafeliz.mp4')}}" type="video/mp4">
+                  </video>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <ul class="resposta--">
+                <li class="texto">
+                  <p>Parabéns</p>
+                  <p>pois os erros te deixam mais forte</p>
+                </li>
+                <li class="video-resposta">
+                  <video class="video-errou" autoplay muted controls loop>
+                    <source src="{{ url_for('static', filename='img/memes/felizparapreocupado.mp4')}}" type="video/mp4">
+                  </video>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </article>
+      </main>
+      <main><!-- topico 8 -->
+        <h2>Impostos</h2>
+        <article>
+          <p>Pergunta 1: Escolha a melhor</p>
+          <button onclick="checkAnswer('certo')">a) Usar deduções disponíveis, como planos de previdência e despesas médicas.</button>
+          <button onclick="checkAnswer('erro')">b) Ignorar deduções fiscais.</button>
+          <button onclick="checkAnswer('erro')">c) Declarar menos despesas do que realmente teve.</button>
+          <section class="resposta">
+            <div>
+              <ul class="resposta--">
+                <li class="texto">
+                  <p>Boa escolha!</p>
+                </li>
+                <li class="video-resposta">
+                  <video class="video-acertou" autoplay muted controls loop>
+                    <source src="{{ url_for('static', filename='img/memes/sorrisooculos.mp4')}}" type="video/mp4">
+                  </video>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <ul class="resposta--">
+                <li class="texto">
+                  <p>Ops! Tente prestar mais atenção na próxima.</p>
+                </li>
+                <li class="video-resposta">
+                  <video class="video-errou" autoplay muted controls loop>
+                    <source src="{{ url_for('static', filename='img/memes/felizparapreocupado.mp4')}}" type="video/mp4">
+                  </video>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </article>
+        <article>
+          <p>Pergunta 2: Escolha a melhor decição.</p>
+          <button onclick="checkAnswer('certo')">a) Planejar as finanças de forma a otimizar os impostos anualmente.</button>
+          <button onclick="checkAnswer('erro')">b) Fazer o planejamento fiscal apenas quando chega a época de declaração.</button>
+          <button onclick="checkAnswer('erro')">c) Não planejar e pagar os impostos conforme aparecem.</button>
+          <section class="resposta">
+            <div>
+              <ul class="resposta--">
+                <li class="texto">
+                  <p>EXCELENTE!</p>
+                  <p>Resposta correta!</p>
+                </li>
+                <li class="video-resposta">
+                  <video class="video-acertou" autoplay muted controls loop>
+                    <source src="{{ url_for('static', filename='img/memes/ovelhafeliz.mp4')}}" type="video/mp4">
+                  </video>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <ul class="resposta--">
+                <li class="texto">
+                  <p>Próxima vez tenta D de Deus</p>
+                </li>
+                <li class="video-resposta">
+                  <video class="video-errou" autoplay muted controls loop>
+                    <source src="{{ url_for('static', filename='img/memes/macaco.mp4')}}" type="video/mp4">
+                  </video>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </article>
+        <article>
+          <p>Pergunta 3: Qual o correto a se fazer para problemas com impostos.</p>
+          <button onclick="checkAnswer('certo')">a) Buscar orientação de um contador ou consultor tributário.</button>
+          <button onclick="checkAnswer('erro')">b) Fazer a declaração de impostos sem ajuda, independentemente da complexidade.</button>
+          <button onclick="checkAnswer('erro')">c) Evitar consultas para economizar dinheiro.</button>
+          <section class="resposta">
+            <div>
+              <ul class="resposta--">
+                <li class="texto">
+                  <p>Parabéns!</p>
+                  <p>Resposta correta! Buscar orientação de um contador ou consultor tributário.</p>
+                </li>
+                <li class="video-resposta">
+                  <video class="video-acertou" autoplay muted controls loop>
+                    <source src="{{ url_for('static', filename='img/memes/preguicafeliz.mp4')}}" type="video/mp4">
+                  </video>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <ul class="resposta--">
+                <li class="texto">
+                  <p>Parabéns</p>
+                  <p>pois os erros te deixam mais forte</p>
+                </li>
+                <li class="video-resposta">
+                  <video class="video-errou" autoplay muted controls loop>
+                    <source src="{{ url_for('static', filename='img/memes/felizparapreocupado.mp4')}}" type="video/mp4">
+                  </video>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </article>
+      </main>
+    </div>
+  </section>
+  <footer class="rodape">
+    <p>Time 12. Alguns Direitos Reservados.</p>
+  </footer>
+  <script src="{{ url_for('static', filename='js/quiz.js')}}"></script>
+  <script src="{{ url_for('static', filename='js/projetoTime12.js')}}"></script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+.ed-finaceira {
+  margin: 12px;
+}
+
+.ed-finaceira h1 {
+  font-size: 3rem;
+  text-align: center;
+  color: #0056b3;
+}
+
+.ed-finaceira .principle {
+  font-size: 1.2rem;
+
+  margin-bottom: 20px;
+}
+
+.ed-finaceira .principle h2 {
+  color: #0056b3;
+}
+
+.ed-finaceira .principle p {
+  margin: 5px 0;
+}
+
+.example {
+  
+  margin-top: 10px;
+  font-style: italic;
+  color: #555;
+}

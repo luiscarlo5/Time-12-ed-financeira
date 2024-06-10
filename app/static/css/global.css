@@ -5,7 +5,7 @@ body {
   display: grid;
   grid-template-columns: 100%;
   font-family: "Fira Sans", Arial, sans-serif;
-  margin: 0px 200px 0px 200px;
+  margin: 0px 150px 0px 150px;
   color: white;
   align-content:center ;
   
@@ -40,12 +40,7 @@ button {
 
 @media (max-width: 1920px) {
   body {
-    margin: 0px 210px 0px 210px;
-  }
-}
-@media (max-width: 400px) {
-  body {
-    margin: 0px 10px 0px 0px;
+    margin: 0px 148px 0px 148px;
   }
 }
 
@@ -54,7 +49,11 @@ button {
     margin: 0px 133px 0px 133px;
   }
 }
-
+@media (max-width: 1100px) {
+  body {
+    margin: 0px 30px 0px 30px;
+  }
+}
 @media (max-width: 700px) {
   body {
     margin: 0px 5px 0px 5px;

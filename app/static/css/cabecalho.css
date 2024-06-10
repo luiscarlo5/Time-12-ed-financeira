@@ -28,10 +28,13 @@
 .fundoinicial h1 {
   margin: 6px;
   margin-top: 30px;
+  width: auto;
+  max-width: auto;
 }
 
 .titulo {
-  font-size: 5.5rem;
+  font-size: 4.4rem;
+  max-width: 100%;
   width: 100%;
   height: auto;
   display: flex;

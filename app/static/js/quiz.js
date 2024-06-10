@@ -18,18 +18,20 @@ function deleteAnswer(){
   resposta[0].classList.remove('ativo');
   resposta[1].classList.remove('ativo');
 }
+
 function initTabQuestions() {
   const tabButton1 = document.querySelector('.quiz .aux1 button');
   const tabTopicos = document.querySelectorAll('.quiz .questions main');
 
   const tabButton2 = document.querySelector('.quiz .aux2 button');
-  let tabPerguntas = document.querySelectorAll('.quiz .questions main.ativo article');
+  let tabPerguntas = document.querySelectorAll('.quiz .questions main article');
 
   let posicao1 = 0; // topicos
   let posicao2 = 0; // perguntas
   if ( tabTopicos.length && tabPerguntas.length ) {
     tabTopicos[0].classList.add('ativo');
     tabPerguntas[0].classList.add('ativo');
+    tabPerguntas = document.querySelectorAll('.quiz .questions main.ativo article');
 
     function activeTopics(posicao) {
       tabTopicos.forEach((main) => {

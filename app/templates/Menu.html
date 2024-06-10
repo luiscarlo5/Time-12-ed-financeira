@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv='X-UA-Compatible' content="IE=edge">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/projetoMand.css')}}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.className += ' js';</script>
+  <script src="{{ url_for('static', filename='js/projetoVS.js')}}"></script>
+  <title>Time 12</title>
+</head>
+
+<body>
+  <header class="Cabecalho">
+    <div class="fundoinicial">
+      <h1 class="titulo">The Twelve</h1>
+      <nav class="navegador">
+        <ul class="menu">
+          <li><a href="{{ url_for('index') }}" onclick="rolardevagar('Apres')">Inicio</a></li>
+          <li><a href="{{ url_for('quiz') }}" onclick="rolardevagar('f1')">Quiz</a></li>
+          <li><a href="{{ url_for('visualizadorGrafico') }}" onclick="rolardevagar('quem-somos')">Ver dados gráficos</a></li>
+          <li><a href="{{ url_for('edfinanceira') }}" onclick="rolardevagar('graf')">Ensino Ed. Finançeira</a></li>
+          <li><a href="{{ url_for('visualizadorGraficoPrime') }}" onclick="rolardevagar('IA')"> Ver previsões com Inteligência Artificial</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <article class="principal_introducao">
+      <div class="intro-text">
+        <p id="Apres" class="profissao">Seja bem-vindo, escolha acima o que deseja fazer</p>
+        <h2 class="nome1">Tewlve</h2>
+        <h2 class="nome2">Web</h2>
+      </div>
+      <div class="intro-img">
+        <video width="360" controls autoplay muted loop>
+          <img src="{{ url_for('static', filename='img/img1.jpg')}}" alt=" ">
+
+          <source src="{{ url_for('static', filename='img/memes/gato-beijo.mp4')}}" type="video/mp4" />
+        </video>
+      </div>
+  </main>
+
+  <footer class="rodape">
+    <p>Time 12. Alguns Direitos Reservados.</p>
+  </footer>
+  <script src="{{ url_for('static', filename='js/projetoTime12.js')}}"></script>
+</body>
+
+</html>

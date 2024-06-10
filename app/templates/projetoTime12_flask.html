@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv='X-UA-Compatible' content="IE=edge">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/projetoMand.css')}}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.className += ' js';</script>
+  <script src="{{ url_for('static', filename='js/projetoVS.js')}}"></script>
+  <title>Time 12</title>
+</head>
+
+<body>
+  <header class="Cabecalho">
+    <div class="fundoinicial">
+      <h1 class="titulo">Mandacaru.dev The Twelve</h1>
+      <nav class="navegador">
+        <ul class="menu">
+          <li><a href="#Apres" onclick="rolardevagar('Apres')">Apresentação</a></li>
+          <li><a href="{{ url_for('login') }}" onclick="rolardevagar('f1')">Login/Cadastro</a></li>
+          <li><a href="#quem-somos" onclick="rolardevagar('quem-somos')">Quem Somos</a></li>
+          <li><a href="#graf" action="" onclick="rolardevagar('graf')">Gráfico</a></li>
+          <li><a href="#ed-f" onclick="rolardevagar('ed-f')">Ensino Ed. Finançeira</a></li>
+          <li><a href="#IA" onclick="rolardevagar('IA')">Inteligência Artificial</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <article class="principal_introducao">
+      <div class="intro-text">
+        <p id="Apres" class="profissao">Desenvolvedores de Software focados em Educação Financeira</p>
+        <h2 class="nome1">Tewlve</h2>
+        <h2 class="nome2">Web</h2>
+        <p class="intro-p">Aqui cuidaremos melhor do seu dinheiro e mostraremos analises atuais e previsões futuras de seus gastos e possíveis ivestimentos</p>
+      </div>
+      <div class="intro-img">
+        <img src="{{ url_for('static', filename='img/img1.jpg')}}" alt=" ">
+      </div>
+    </article>
+    <section id="quem-somos" class="quem-somos">
+      <h3>Quem somos?</h3>
+      <p>Somos um grupo de desenvolvedores de aplicações tecnologicas chamada The Twelve, e nosso foco está em apliar e formar uma cosmovisão, em brasileiros, sobre Educação Financeira através de softwares avançados e dinânmicos</p>
+      <button id="botao-apresentacao-equipe">>
+      </button>
+      <ul class="apresentacao-equipe-img">
+        <li><img src="{{ url_for('static', filename='img/quemsomos/fotoLuisCarlos.jpg')}}" alt=" "></li>
+        <li><img src="{{ url_for('static', filename='img/quemsomos/Carla-foto.jpg')}}" alt=" "></li>
+        <li><img src="{{ url_for('static', filename='img/quemsomos/ermeson.jpg')}}" alt=" "></li>
+        <li><img src="{{ url_for('static', filename='img/quemsomos/Carlos-1_reducida.jpg')}}" alt=" "></li>
+      </ul>
+      <div class="apresentacao-equipe-text">
+        <section>
+          <h2>Luis Carlos</h2>
+          <p>Estudante de Engenharia de Computação na UFC,
+            tenho conhecimento e muito interesse em programção web, ciência de dados, processamento de imagem e gestão e metodologia ágil.
+          </p>
+        </section>
+        <section>
+          <h2>Carla Suene</h2>
+          <p>Me chamo Carla Suenne, faço Sistemas e Mídias Digitais pela UFC e sou apaixonada pela área de T.I.
+          <p>
+        </section>
+        <section>
+          <h2>Antônio Ermeson</h2>
+          <p>Sou graduando em Engenharia de Computação pela UFC e também um apaixonado pela tecnologia!. Tenho grande interesse e conhecimento em projetos no ramo de Visão Computacional, Processamento digital de Imagens, Desenvolvimento BackEnd, Engenharia de Software e Computação em Nuvem.</p>
+        </section>
+        <section>
+          <h2>Carlos Gutierrez</h2>
+          <p>Estudante de Mestrado em Modelagem e Métodos Quantitativos na UFC. Formado em economia e engenharia em agrimensura. Tenho experiencia em sistemas de informação geográfica e ciência de dados. Tenho interesse em aprender sobre desenvolvimento de software e gerenciamento de equipes.</p>
+        </section>
+      </div>
+    </section>
+    <section class="funcionalidades-informativo">
+      <h3 class="funcionalidades-titulo">O que você irá usufruir na Plataforma The Twelve-Web</h3>
+      <h3 id="graf">Gráfico de Gastos e de Investimentos</h3>
+      <p>Interface dinâmica gráfica para visualizar seus gastos, econômicas e investimentos em gráficos de Pizza, Colunas, Linhas e Barras que ajudarão você no seu planejamento financeiro e ed. financeira</p>
+      <section class="graficos">
+        <div class="grafico-botoes">
+          <a> Gráfico de Linha<br></a>
+          <a> Pizza<br></a>
+          <a> Gráfico em Barras<br></a>
+          <a> Gráfico em Colunas<br></a>
+        </div>
+        <div class="grafico-img">
+          <img class="ativo" src="{{ url_for('static', filename='img/graficos/graflinha.jpg')}}" alt="">
+          <img src="{{ url_for('static', filename='img/graficos/grafpizza.jpg')}}" alt="">
+          <img src="{{ url_for('static', filename='img/graficos/grafbarra.jpg')}}" alt="">
+          <img src="{{ url_for('static', filename='img/graficos/grafcoluna.jpg')}}" alt="">
+          <img src="{{ url_for('static', filename='img/graficos/grafcoluna.jpg')}}" alt="">
+
+        </div>
+      </section>
+
+      <h3 id="ed-f">Aprendizado lúdico - Ed-financeira</h3>
+      <p>TEmos a nossa área de Educação Lúdica em Educação Financeira! Aqui, transformamos o aprendizado sobre finanças em uma experiência divertida e envolvente. Através de quizzes interativos, você pode testar e expandir seus conhecimentos sobre planejamento financeiro, poupança, investimentos e muito mais. Nossos jogos educativos são projetados para tornar conceitos complexos acessíveis e fáceis de entender para todas as idades.
+      </p>
+
+
+      <h3 id="IA">Inteligências Artificiais de previsão</h3>
+      <p>Estamos na vanguarda da tecnologia financeira, oferecendo insights baseados em Inteligência Artificial (IA). Nossos sistemas de IA analisam tendências de mercado e fornecem previsões detalhadas sobre investimentos. Isso permite que você tome decisões informadas e estratégicas para o seu futuro financeiro. Junte-se a nós e descubra como aprender sobre finanças pode ser não apenas educativo, mas também divertido e dinâmico!</p>
+
+
+
+
+
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <p>Time 12. Alguns Direitos Reservados.</p>
+  </footer>
+  <script src="{{ url_for('static', filename='js/projetoTime12.js')}}"></script>
+</body>
+
+</html>
