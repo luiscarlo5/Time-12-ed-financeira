@@ -1,32 +1,48 @@
-.grafico {
+.grafico- {
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
   font-family: Arial, sans-serif;
   margin: 20px;
-  background-color: #f5f5f5;
+  margin-left: 30px;
 }
-.grafico h1 {
+.dias-dados {
+  grid-template-rows: 1;
+  width: 100%;
+}
+.topicos-dados {
+  grid-column: 2;
+  width: 100%;
+
+}
+.mensal-dados {
+  grid-column: 3;
+  width: 100%;
+}
+
+
+.grafico- h1 {
   text-align: center;
 }
-.grafico .container {
-  display: flex;
+.grafico-  {
   justify-content: center;
   gap: 20px;
 }
-.grafico .form-container {
-  background-color: #ffffff;
+.grafico- .form-container {
+  background-color: #246d80;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 300px;
+  width: 90%;
 }
-.grafico .form-container form {
+.grafico- .form-container form {
   display: flex;
   flex-direction: column;
 }
-.grafico .form-container label {
+.grafico- .form-container label {
   margin-bottom: 5px;
   font-weight: bold;
 }
-.grafico .form-container input[type="number"], 
+.grafico- .form-container input[type="number"], 
 .form-container input[type="text"] {
   margin-bottom: 15px;
   padding: 8px;
@@ -34,7 +50,7 @@
   border-radius: 4px;
   width: 100%;
 }
-.grafico .form-container input[type="submit"], 
+.grafico- .form-container input[type="submit"], 
 .form-container button {
   padding: 10px;
   border: none;
@@ -44,10 +60,32 @@
   cursor: pointer;
   font-size: 16px;
 }
-.grafico .form-container input[type="submit"]:hover, 
-.grafico .form-container button:hover {
+.grafico- .form-container input[type="submit"]:hover, 
+.grafico- .form-container button:hover {
   background-color: #45a049;
 }
-.grafico .form-container button {
+.grafico- .form-container button {
   margin-bottom: 15px;
+}
+
+.grafico-- {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+.grafico-- .chart-container {
+  width: 45%;
+  margin: 20px 0;
+  text-align: center;
+}
+.grafico-- img {
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.grafico-- img:hover {
+  transform: scale(1.05);
 }

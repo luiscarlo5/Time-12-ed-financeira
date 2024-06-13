@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria de Imagens</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/projetoMand.css') }}">
+  <link rel="stylesheet" href="../static/css/projetoMand.css">
+
+  <style>
+    .graficos {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 100vh;
+
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+      width: 95%;
+    }
+
+    .gallery img {
+      width: 100%;
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      filter: brightness(1.2);
+    }
+
+    .gallery .large {
+      height: 500px;
+      width: 900px;
+      padding-left: 50px;
+      grid-column: span 2;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="Cabecalho">
+    <div class="fundoinicial">
+      <h1 class="titulo">The Twelve</h1>
+      <nav class="navegador">
+        <ul class="menu">
+          <li><a href="#Apres" onclick="rolardevagar('Apres')">Menu</a></li>
+          <li><a href="#login" onclick="rolardevagar('f1')">Inserir Dados</a></li>
+
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="graficos">
+    <h1>Veja seus dados e analise seus dados abaixo</h1>
+    <div class="gallery">
+      <img src="../static/imgs_matplotlib/gastos_barra_000.png" alt="1">
+      <img src="../static/imgs_matplotlib/gastos_barra.png" alt="2">
+      <img src="../static/imgs_matplotlib/gastos_coluna.png" alt="3">
+      <img src="../static/imgs_matplotlib/gastos_pizza.png" alt="4">
+      <img src="../static/imgs_matplotlib/gastos_linha.png" alt="5" class="large">
+    </div>
+  </div>
+
+  <footer class="rodape">
+    <p>Time 12. Alguns Direitos Reservados.</p>
+  </footer>
+</body>
+
+</html>
