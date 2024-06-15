@@ -236,6 +236,29 @@
   border-radius: 30px;
   padding: 10px;
 }
+.funcionalidades-informativo .ed-f {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-left: 70px;
+  grid-column: 1/-1;
+  height: 400px;
+  width: auto;
+}
+
+.funcionalidades-informativo .ed-f img {
+  display: block;
+  height: 360px;
+  border-radius: 30px;
+  width: auto;
+}
+
+.ed-f .edf {
+  grid-column: 1;
+}
+.ed-f .quiz-img {
+  margin-left: -50px;
+  grid-column: 2;
+}
 /*   graficos   */
 .graficos{
   margin-left: 0px;
@@ -334,6 +357,20 @@
     display: grid;
     margin: 20px;
     grid-template-columns: 100%;
+  }
+  .funcionalidades-informativo {
+    display: grid;
+    grid-template-columns: 90%;
+    width: 100%;
+    margin-left: -120px;
+  }
+  .funcionalidades-informativo p {
+    grid-column: 1;
+  }
+  .grafico-img {
+    grid-column: 2;
+    width: 100%;
+    margin-left: 40px;
   }
   .intro-img {
     display: block;

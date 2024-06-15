@@ -53,9 +53,8 @@
       <h1 class="titulo">The Twelve</h1>
       <nav class="navegador">
         <ul class="menu">
-          <li><a href="#Apres" onclick="rolardevagar('Apres')">Menu</a></li>
-          <li><a href="#login" onclick="rolardevagar('f1')">Inserir Dados</a></li>
-
+          <li><a href="{{ url_for('menu') }} ">Menu</a></li>
+          <li><a href="{{ url_for('inserirDados') }}">Inserir Dados</a></li>
         </ul>
       </nav>
     </div>
@@ -63,11 +62,11 @@
   <div class="graficos">
     <h1>Veja seus dados e analise seus dados abaixo</h1>
     <div class="gallery">
-      <img src="../static/imgs_matplotlib/gastos_barra_000.png" alt="1">
+      <img src="../static/imgs_matplotlib/gastos_barra_semanal_.png" alt="1">
       <img src="../static/imgs_matplotlib/gastos_barra.png" alt="2">
-      <img src="../static/imgs_matplotlib/gastos_coluna.png" alt="3">
-      <img src="../static/imgs_matplotlib/gastos_pizza.png" alt="4">
-      <img src="../static/imgs_matplotlib/gastos_linha.png" alt="5" class="large">
+      <img src="../static/imgs_matplotlib/gastos_coluna_mensal_.png" alt="3">
+      <img src="../static/imgs_matplotlib/dados_pizza_mensal.png" alt="4">
+      <img src="../static/imgs_matplotlib/previsao_mensal_por_IA.png" alt="5" class="large">
     </div>
   </div>
 

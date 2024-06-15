@@ -18,109 +18,99 @@
       <h1 class="titulo">The Twelve</h1>
       <nav class="navegador">
         <ul class="menu">
-          <li><a href="{{ url_for('index') }}" onclick="rolardevagar('Apres')">Menu</a>
-          </li>
-          <li><a href="{{ url_for('Graficos') }}" onclick="rolardevagar('IA')">visualizar Graficos</a>
-          </li>
+          <li><a href="{{ url_for('index') }}">Menu</a></li>
+          <li><a href="{{ url_for('graficos') }}">Visualizar Gráficos</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-
   <h1>Gastos Diários e por Tópico</h1>
-  <div class="grafico-">
+
+  <form id="consolidatedForm" class="grafico-" action="{{ url_for('inserirDados')}}" method="post">
     <div class="dias-dados form-container">
       <h2>Gastos Diários</h2>
-      <form id="dailyExpensesForm" method="post">
-        <label for="monday">Segunda-feira:</label>
-        <input type="number" step="0.01" id="monday" name="monday" required>
+      <label for="monday">Segunda-feira:</label>
+      <input type="number" step="0.01" id="monday" name="monday" required>
 
-        <label for="tuesday">Terça-feira:</label>
-        <input type="number" step="0.01" id="tuesday" name="tuesday" required>
+      <label for="tuesday">Terça-feira:</label>
+      <input type="number" step="0.01" id="tuesday" name="tuesday" required>
 
-        <label for="wednesday">Quarta-feira:</label>
-        <input type="number" step="0.01" id="wednesday" name="wednesday" required>
+      <label for="wednesday">Quarta-feira:</label>
+      <input type="number" step="0.01" id="wednesday" name="wednesday" required>
 
-        <label for="thursday">Quinta-feira:</label>
-        <input type="number" step="0.01" id="thursday" name="thursday" required>
+      <label for="thursday">Quinta-feira:</label>
+      <input type="number" step="0.01" id="thursday" name="thursday" required>
 
-        <label for="friday">Sexta-feira:</label>
-        <input type="number" step="0.01" id="friday" name="friday" required>
+      <label for="friday">Sexta-feira:</label>
+      <input type="number" step="0.01" id="friday" name="friday" required>
 
-        <label for="saturday">Sábado:</label>
-        <input type="number" step="0.01" id="saturday" name="saturday" required>
+      <label for="saturday">Sábado:</label>
+      <input type="number" step="0.01" id="saturday" name="saturday" required>
 
-        <label for="sunday">Domingo:</label>
-        <input type="number" step="0.01" id="sunday" name="sunday" required>
-
-        <input type="submit" value="Salvar">
-      </form>
+      <label for="sunday">Domingo:</label>
+      <input type="number" step="0.01" id="sunday" name="sunday" required>
     </div>
 
     <div class="topicos-dados form-container">
       <h2>Gastos por Tópico</h2>
-      <form id="topicExpensesForm" method="post">
-        <div id="topics">
-          <div>
-            <label for="food">Alimentação:</label>
-            <input type="number" step="0.01" id="food" name="food" required>
-          </div>
-
-          <div>
-            <label for="entertainment">Lazer:</label>
-            <input type="number" step="0.01" id="entertainment" name="entertainment" required>
-          </div>
-
-          <div>
-            <label for="housing">Imóvel:</label>
-            <input type="number" step="0.01" id="housing" name="housing" required>
-          </div>
-
-          <div>
-            <label for="transportation">Transporte:</label>
-            <input type="number" step="0.01" id="transportation" name="transportation" required>
-          </div>
-
-          <div>
-            <label for="energy">Energia:</label>
-            <input type="number" step="0.01" id="energy" name="energy" required>
-          </div>
-
-          <div>
-            <label for="water">Água:</label>
-            <input type="number" step="0.01" id="water" name="water" required>
-          </div>
+      <div id="topics">
+        <div>
+          <label for="sallary">Salário:</label>
+          <input type="number" step="0.01" id="sallary" name="sallary" required>
         </div>
-        <button type="button" onclick="addTopic()">Adicionar Tópico</button>
-        <input type="submit" value="Salvar">
-      </form>
+        <div>
+          <label for="food">Alimentação:</label>
+          <input type="number" step="0.01" id="food" name="food" required>
+        </div>
+        <div>
+          <label for="entertainment">Lazer:</label>
+          <input type="number" step="0.01" id="entertainment" name="entertainment" required>
+        </div>
+        <div>
+          <label for="housing">Imóvel:</label>
+          <input type="number" step="0.01" id="housing" name="housing" required>
+        </div>
+        <div>
+          <label for="transportation">Transporte:</label>
+          <input type="number" step="0.01" id="transportation" name="transportation" required>
+        </div>
+        <div>
+          <label for="energy">Energia:</label>
+          <input type="number" step="0.01" id="energy" name="energy" required>
+        </div>
+        <div>
+          <label for="water">Água:</label>
+          <input type="number" step="0.01" id="water" name="water" required>
+        </div>
+      </div>
+      <button type="button" onclick="addTopic()">Adicionar Tópico</button>
     </div>
+
     <div class="mensal-dados form-container">
       <h2>Gastos Mensais</h2>
-      <form id="monthlyExpensesForm" method="post">
-        <label for="january">Janeiro:</label>
-        <input type="number" step="0.01" id="january" name="january" required>
+      <label for="january">Janeiro:</label>
+      <input type="number" step="0.01" id="january" name="january" required>
 
-        <label for="february">Fevereiro:</label>
-        <input type="number" step="0.01" id="february" name="february" required>
+      <label for="february">Fevereiro:</label>
+      <input type="number" step="0.01" id="february" name="february" required>
 
-        <label for="march">Março:</label>
-        <input type="number" step="0.01" id="march" name="march" required>
+      <label for="march">Março:</label>
+      <input type="number" step="0.01" id="march" name="march" required>
 
-        <label for="april">Abril:</label>
-        <input type="number" step="0.01" id="april" name="april" required>
+      <label for="april">Abril:</label>
+      <input type="number" step="0.01" id="april" name="april" required>
 
-        <label for="may">Maio:</label>
-        <input type="number" step="0.01" id="may" name="may" required>
+      <label for="may">Maio:</label>
+      <input type="number" step="0.01" id="may" name="may" required>
 
-        <label for="june">Junho:</label>
-        <input type="number" step="0.01" id="june" name="june" required>
-
-        <input type="submit" value="Salvar">
-      </form>
+      <label for="june">Junho:</label>
+      <input type="number" step="0.01" id="june" name="june" required>
     </div>
-  </div>
+
+    <input type="submit" class="button" value="Salvar Todos">
+  </form>
+
 
   <footer class="rodape">
     <p>Time 12. Alguns Direitos Reservados.</p>

@@ -1,3 +1,3 @@
-def IA(mes, dados):
+def IA(ultimo_mes):
   
   return

@@ -17,11 +17,11 @@
       <h1 class="titulo">The Twelve</h1>
       <nav class="navegador">
         <ul class="menu">
-          <li><a href="{{ url_for('index') }}" onclick="rolardevagar('Apres')">Inicio</a></li>
-          <li><a href="{{ url_for('quiz') }}" onclick="rolardevagar('f1')">Quiz</a></li>
-          <li><a href="{{ url_for('inserirDados') }}" onclick="rolardevagar('quem-somos')">Ver dados gráficos</a></li>
-          <li><a href="{{ url_for('edfinanceira') }}" onclick="rolardevagar('graf')">Ensino Ed. Finançeira</a></li>
-          <li><a href="{{ url_for('Graficos') }}" onclick="rolardevagar('IA')"> Ver previsões com Inteligência Artificial</a></li>
+          <li><a href="{{ url_for('index') }}">Inicio</a></li>
+          <li><a href="{{ url_for('quiz') }}">Quiz</a></li>
+          <li><a href="{{ url_for('inserirDados') }}">Inserir Dados</a></li>
+          <li><a href="{{ url_for('edfinanceira') }}">Ensino Ed. Finançeira</a></li>
+          <li><a href="{{ url_for('graficos') }}">Ver análise Gráfica</a></li>
         </ul>
       </nav>
     </div>
@@ -29,7 +29,7 @@
   <main>
     <article class="principal_introducao">
       <div class="intro-text">
-        <p id="Apres" class="profissao">Seja bem-vindo, escolha acima o que deseja fazer</p>
+        <p id="Apres" class="profissao">Seja bem-vindo {{ nome }}, escolha acima o que deseja fazer</p>
         <h2 class="nome1">Tewlve</h2>
         <h2 class="nome2">Web</h2>
       </div>
