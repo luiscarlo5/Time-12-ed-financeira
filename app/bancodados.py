@@ -2,7 +2,7 @@ import sqlite3
 
 # Função para conectar ao banco de dados
 def connect_db():
-  return sqlite3.connect('usuarios_time12.db')
+  return sqlite3.connect('users.db')
 
 # Função para criar a tabela 'users' se não existir
 def create_table():
@@ -58,6 +58,7 @@ def main():
   message = insert_user(name, cpf, password)
   print(message)
 
+create_table()
 conn = connect_db()
 # Seleciona todos os dados da tabela 'users'
 cursor = conn.cursor()
