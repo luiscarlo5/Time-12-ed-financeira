@@ -48,10 +48,7 @@ def uptade(nome):
   return 0
   # Atualizando a idade de um usuário
   #conn.execute("UPDATE usuarios SET idade = 31 WHERE nome = 'Maria'")
-
-
-
-
+  
 # Função principal para demonstrar a inserção e verificação
 def main():
   create_table()

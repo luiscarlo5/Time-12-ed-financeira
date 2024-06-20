@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galeria de Imagens</title>
+  <title>Deletar usuário</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/projetoMand.css') }}">
   <link rel="stylesheet" href="../static/css/projetoMand.css">
 </head>
@@ -16,25 +16,14 @@
       <nav class="navegador">
         <ul class="menu">
           <li><a href="{{ url_for('menu') }} ">Menu</a></li>
-          <li><a href="{{ url_for('inserirDados') }}">Inserir Dados</a></li>
         </ul>
       </nav>
     </div>
   </header>
-  <div class="graficos">
-    <h1>Veja seus dados e analise seus dados abaixo</h1>
-    <div class="gallery">
-      <img src="../static/imgs_matplotlib/gastos_barra_semanal_.png" alt="1">
-      <img src="../static/imgs_matplotlib/gastos_barra.png" alt="2">
-      <img src="../static/imgs_matplotlib/gastos_coluna_mensal_.png" alt="3">
-      <img src="../static/imgs_matplotlib/dados_pizza_mensal.png" alt="4">
-      <img src="../static/imgs_matplotlib/previsao_mensal_por_IA.png" alt="5" class="large">
-    </div>
-  </div>
+
+  <button class="deletar" action="deletar">Deletar</button>
 
   <footer class="rodape">
     <p>Time 12. Alguns Direitos Reservados.</p>
   </footer>
 </body>
-
-</html>

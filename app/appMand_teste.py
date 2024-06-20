@@ -46,8 +46,8 @@ def inserirDados():
     dias = []
     dados_alimentacao = request.form['food']
     meses = ['janeiro', 'fevereiro', 'março',' abril', 'maio', 'junho']
-    #grafico.gastos_mensais( meses , dados_mensais )
-    #grafico.grafico_semanal_em_barra(dias, gastos)
+    grafico.gastos_mensais( meses , dados_mensais )
+    
 
 
     seg = float(request.form['monday'])
@@ -59,7 +59,7 @@ def inserirDados():
     dom = float(request.form['sunday'])
     sem = [seg, ter, qua, qui, sex, sab, dom]
     sem_nome = ['seg', 'ter', 'qua', 'qui', 'sex', 'sab', 'dom']
-    #grafico.grafico_semanal_em_barra(sem_nome, sem)
+    grafico.grafico_semanal_em_barra(sem_nome, sem)
 
     salario = float(request.form['sallary'])
     alimentacao = float(request.form['food'])
@@ -72,7 +72,7 @@ def inserirDados():
     topicos_nome = ['Restante', 'Alimentação', 'Entreterimente', 'Imóvel', 'Transporte', 'Energia', 'Água']
     diferenca = salario - (alimentacao + entreterimento + imovel + transporte + energia)
     topicos_gastos = [diferenca, alimentacao, entreterimento, imovel, transporte, energia, agua ]
-    #grafico.gasto_grupos_topicos(topicos_nome, topicos_gastos)
+    grafico.gasto_grupos_topicos(topicos_nome, topicos_gastos)
     Prime = True
     if Prime==True:
       grafico.grafico_linha_meses(meses, dados_mensais, premiun=True)
@@ -94,6 +94,11 @@ def edfinanceira():
 @app.route('/quiz')
 def quiz():
   return render_template('quiz.html')
+
+@app.route('/deletar')
+def deletar():
+  nome = request.args.get('nome')
+  return render_template('atualizar_deletar.html', nome=nome)
 
 if __name__ == '__main__':
     app.run(debug=True)
