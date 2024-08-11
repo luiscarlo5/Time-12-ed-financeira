@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv='X-UA-Compatible' content="IE=edge">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/projetoMand.css')}}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.className += ' js';</script>
+  <script src="{{ url_for('static', filename='js/projetoVS.js')}}"></script>
+  <title>Cálculo Numérico - UFC</title>
+</head>
+
+<body>
+  <header class="Cabecalho">
+    <div class="fundoinicial">
+      <div class="aux-ufc">
+        <img src="{{ url_for('static', filename='img/logo_ufc.png')}}" alt=" ">
+        <h1 class="titulo">Trabalho de Cálculo Numérico</h1>
+      </div class="nomes">
+        <h2>UNIVERSIDADE FEDERAL DO CEARÁ CENTRO DE CIÊNCIAS DEPARTAMENTO DE COMPUTAÇÃO CÁLCULO NUMÉRICO</h2>
+        <p> </p>
+        <h2> Implementação de métodos numéricos para encontrar raízes de equações.</h2>
+      <div class="alunos">
+        <p></p> Alunos:</p>
+        <p>Horley Alfredo dos Santos</p>
+        <p>Antônio Gustavo de Almeida Lemos</p>
+        <p>Luis Carlos Rodrigues dos Anjos</p>
+        <p>Samuel Sales Furtado</p>
+        <p>Antonio Mateus Barbosa Azevedo</p>
+        <p>Janielle do Nascimento Albino</p>
+        <p>Gabriel Richard Tavares de Oliveira</p>
+        <p>Noely Gomes Barroso</p>
+      </div>
+      </div>
+    </div>
+
+    </div>
+  </header>
+  <section >
+    <h4>Situação problema</h4>
+    <p class="indented">Uma indústria de alimentos enfrenta desafios constantes para otimizar seus processos
+      produtivos e garantir a qualidade dos seus produtos. Entre esses desafios, a 
+      determinação da quantidade ideal de ingredientes para um novo produto é crucial, 
+      pois afeta diretamente a lucratividade e a viabilidade operacional. Para abordar
+      essa questão, utilizaremos modelos matemáticos e métodos numéricos para encontrar
+      a quantidade ótima de ingredientes que maximiza o lucro, respeitando as restrições 
+      de produção.
+    </p>
+    <p class="indented">
+      Considere uma empresa da indústria de alimentos que deseja maximizar a lucratividade na produção de um novo produto. O custo de produção é regido pela função <b>f(Q) = CeQ - 4Q2</b>, onde:
+      C é o valor de custo dos ingredientes (em bilhões), determinado pela escolha do fornecedor.
+      Q é a quantidade de ingredientes comprada para o produto considerado onde Q varia conforme o valor de C. 
+    </p>
+    <p class="indented">Para garantir a viabilidade da produção e evitar problemas de espaço e prejuízos financeiros, a quantidade de ingredientes Q deve ser menor que 0,7 toneladas (0,7 . 103 kg).
+    </p>
+  </section>
+  <article class="indented">
+    <h2>Método do Ponto Fixo</h2>
+    <p >O método do ponto fixo é uma técnica iterativa para encontrar uma raiz de uma função f(x). A ideia é reescrever f(x)= 0 na forma φ(x)= x, onde <code>φ(x)</code> é uma função derivada da original e então usar a iteração:</p>
+    <p><b>f(x<sub>n+1</sub>)= φ(x<sub>n</sub>)</b></p>
+    <p >Para garantir a convergência às seguintes condições devem ser satisfeitas:</p>
+    <p style="padding-left: 20px;"> - φ(x) e φ'(x) são contínuos no intervalo [a<sub>0</sub>, b<sub>0</sub>];</p>
+    <p style="padding-left: 20px;">- |'(x)| M menor que 1 x no intervalo [a<sub>0</sub>, b<sub>0</sub>].</p>
+
+    <h2>Método de Newton-Raphson</h2>
+    <p>O método de Newton-Raphson é uma técnica iterativa para encontrar raízes de uma função não linear. Começando com uma aproximação inicial, o método usa a derivada da função para refinar essa estimativa. A fórmula geral é:</p>
+    <p><b>x<sub>n+1</sub> = x<sub>n</sub> - f(x<sub>n</sub>)/f'(x<sub>n</sub>)</b></p>
+    <p>onde x<sub>n</sub>é a estimativa atual, f(x<sub>n</sub>)é o valor da função e f'(x<sub>n</sub>)é a derivada da função no ponto x<sub>n</sub>. O processo é repetido até que a diferença entre as iterações seja suficientemente pequena, indicando que a raiz foi encontrada.</p>
+
+    <h2>Método da Secante</h2>
+    <p>O método da secante é semelhante ao de Newton-Raphson, mas em vez de usar a derivada exata, ele aproxima a derivada por meio de diferenças finitas. Isso elimina a necessidade de calcular f'(x), tornando-o útil quando a derivada é complicada ou desconhecida. A fórmula é:</p>
+    <p><b>x<sub>n+1</sub> = x<sub>n</sub> - {f(x<sub>n</sub>)/ [(f(x<sub>n</sub>) - f(x<sub>n-1</sub>))/(x<sub>n</sub> - x<sub>n-1</sub>)]}</b></p>
+    <p>O método da secante geralmente converge mais lentamente que o de Newton-Raphson, mas é mais eficiente em termos de cálculo, pois não requer a derivada da função.</p>
+
+    
+  </article>
+
+  <section class="resultados">
+    <h3>
+      Resultados 
+    </h3>
+    <div class="r1">
+      <h4>Método</h4>
+      <p>Ponto Fixo Com ꝕ1</p>
+      <p>Ponto Fixo Com ꝕ3</p>
+      <p>Newton e Rapshon</p>
+      <p>Secante</p>
+    </div>
+    <div class="r2">
+      <h4>Raźes</h4>
+      <p>0.714793</p>
+      <p>0.714787</p>
+      <p>0.714806</p>
+      <p>0.714806</p>
+    </div>
+    <div class="r3">
+      <h4>Tempo de Execução</h4>
+      <p>0.000083</p>
+      <p>0.000047</p>
+      <p>0.000008</p>
+      <p>0.000004</p>
+    </div>
+    <div class="r4">
+      <h4>Número de Iterações</h4>
+      <p>8</p>
+      <p>9</p>
+      <p>4</p>
+      <p>5</p>
+    </div>
+  </section>
+  <main>
+
+  <section class="quem-somos">
+    <button id="botao-apresentacao-equipe"> >
+      </button>
+      <ul class="apresentacao-equipe-img">
+        <li><img src="{{ url_for('static', filename='img/graficos/comparacaodas_interacoes.png')}}" alt=" "></li>
+        <li><img src="{{ url_for('static', filename='img/graficos/comparacaodos_erros.png')}}" alt=" "></li>
+        <li><img src="{{ url_for('static', filename='img/graficos/comparacaodos_tempos.png')}}" alt=" "></li>
+        <li><img src="{{ url_for('static', filename='img/graficos/funcao.png')}}" alt=" "></li>
+      </ul>
+      <div class="apresentacao-equipe-text">
+        <section><h2>Comparação do número de interações</h2></section>
+        <section><h2>Comparação dos erros</section>
+        <section><h2>Comparação do tempo de execução</h2></section>
+        <section><h2>Gráfico da função</section>
+      </div>
+  </section>
+  </main>
+  <div class="item-g">
+    <h2>Análise do efeito da variação do valor de C (diferentes fornecedores) para cada método considerado(comparando resposta, acurácia (erro), tempo, número de iterações etc).</h2>
+    <p><b>Dados de entrada:</b> n (número de valores de C), C (para cada n) e ε (precisão).</p>
+    <p><b>Dados de saída:</b> quadros resposta (com Q e erro para cada C e método) e comparativo.</p>
+  <form method="POST" action="{{ url_for('index') }}"> <!-- NOME DA FUNÇÃO  -essa url é para a rota que pega os valores de post e get  -->
+    <label for="num_c">Digite o número de valores de C:</label>
+    <input type="number" name="num_c" min="1" required>
+    <button type="submit">Enviar o númwro de valores de C<sub>n</sub></button>
+  </form>
+  </div>
+
+    
+
+
+  <script src="{{ url_for('static', filename='js/projetoTime12.js')}}"></script>
+</body>
+
+</html>

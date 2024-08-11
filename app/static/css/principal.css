@@ -1,4 +1,89 @@
 
+.indented {
+  text-align: justify;
+  text-indent: 40px; /* O valor pode ser ajustado para o tamanho desejado */
+}
+
+.resultados{
+  background-color: rgb(0, 54, 155);
+  text-align: center;
+  display: grid;
+  grid-template-columns: 30% 18% 26% 26%;
+  grid-template-rows: 35px auto auto auto;
+  margin: 10px;
+  border: solid gray 3px;
+  border-radius: 10px;
+  padding-left: 30px;
+}
+.item-g {
+  border: solid gray 3px;
+  border-radius: 10px;
+  background-color: rgb(0, 54, 155);
+  padding: 4px;
+  margin-top: 35px;
+  margin-bottom: 150px;
+  gap: 5px;
+}
+.item-g p{
+  font-size: 1.1rem;
+  text-align: center;
+  margin-top: 10px;
+}
+.item form{
+  margin-top: 15px;
+}
+.item-g label{
+  font-size: 1.4rem;
+}
+.item-g input{
+  font-size: 1.4rem;
+}
+.item-g button{
+  text-align: center;
+  font-size: 1.2rem;
+  color: aqua;
+  background-color: rgb(0, 0, 73);
+  border: solid gray;
+  border-radius: 20px;
+  padding: 5px;
+}
+.item-g button:hover {
+  background-color: aqua;
+  color: black;
+}
+
+.resultados h3{
+  width: auto;
+  grid-row: 1;
+  grid-column: 2/3;
+  margin-left: 45%;
+  font-size: 1.3rem;
+  padding: 6px;
+  border-radius: 12px 20px;
+  margin-right: 2px;
+}
+.resultados h4{
+  margin: 5px;
+}
+.resultados p {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+.r1, .r2, .r3, .r4{
+  grid-row: 2/-1;
+}
+.r1{
+  grid-column: 1;
+}
+.r2{
+  grid-column: 2;
+}
+.r3{
+  grid-column: 3
+}
+.r4{
+  grid-column: 4;
+}
 /****INTRODUÇÂO********/
 
 .principal_introducao {
@@ -6,157 +91,70 @@
   margin: 20px;
   grid-template-columns: 50% 50%;
 }
-.intro-img {
-  display: block;
-  grid-column: 2;
-  align-content: center;
-  height: 90%;
-  width: 100%;
-  border-radius: 260px;
-}
-.intro-text {
-  display: block;
-  grid-column: 1;
-}
-
-.intro-img img {
-  display: block;
-  align-content: center;
-  height: 100%;
-  border-radius: 160px 15px;
-}
-
-.intro-p {
-  color:white;
-  padding: 10px;
-  margin-top: 30px;
-  display: block;
-  text-align: justify;
-  justify-content: center;
-  align-self: center;
-  align-items: center;
-  font-size: 1.6rem;
-}
-
-
-.intro-text h2 {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 8rem;
-  line-height: 6rem; 
-}
-
-.profissao {
-  font-weight: bold; /*deixa negrito*/
-  font-family:Georgia, 'Times New Roman', Times, serif;
-  color: rgb(4, 95, 95);
-  margin-left: 0px;
-  margin-bottom: -44px;
-  font-size: 3rem;
-  font-style: italic;
-  font-style: oblique;
-  justify-self: center;
-
-}
-
-.nome1 {
-  font-size: 9rem;
-  -webkit-text-stroke: 2px white; /* Espessura e cor da borda */
-  color: transparent; 
-  margin-left: 50px;
-  margin-bottom: -10px;
-  margin-top: 20px;
-
-  position: absolute;
-  z-index: 2;
-}
-.nome2 {
-  color: rgb(3, 104, 104);
-  margin-left: 200px;
-  margin-top: 60px;
-  position: relative;
-  z-index: 1;
-}
-/*   Quem Somos?   */
+/*  Quem Somos?   */
 .quem-somos {
   display: grid;
   gap: 0px; /* Espaçamento entre as colunas */
   padding: 0px;
-  grid-template-columns: 36% 60% 4%;
-  grid-template-rows: auto 480px;
-  max-height: 700px;
+  grid-template-columns: 60% 36% 3% ;
+  grid-template-rows: auto auto auto;
+  max-height: 1200px;
+  max-width:  1200px;
   margin: 0px;
 }
-.quem-somos p{
-  margin: 20px;
-  margin-top: 90px;
-  grid-row: 1;
-  grid-column: 1/-1;
-  font-size: 1.8rem;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-.quem-somos h3{
-  grid-column: 1/-1;
-  grid-row: 1;
-  margin-left: -40px;
-  text-align: center;
-  justify-items: center;
-  font-size: 5rem;
-  font-family: 'Times New Roman', Times, serif;
-}
+
+
 .apresentacao-equipe-img li img{
+  margin: 0px;
   height: auto;
-  border-radius: 20px 60px;
-  grid-row: 2;
+  border-radius: 2px 2px;
+  grid-row: 1;
   grid-column: 1;
 }
 .apresentacao-equipe-img li{
   display: block;
-  grid-row: 2;
-  grid-column: 1;
-  width: 337px;
+  grid-row: 1/2;
+  grid-column: 1/2;
+  width: 100%;
   height: auto;
   margin: 0px;
-  margin-left: 40px;
+  
 
 }
 
 .quem-somos button{
   margin: 0px;
-  margin-top: 60px;
   border-radius: 0px 40px 40px 0px;
   grid-column: 3;
-  grid-row: 2;
-  height: 280px;
-  background-color: aqua;
+  grid-row: 1/2;
+  height: 100%;
+  background-color: white;
   opacity: 0.9;
-  color: rgb(255, 255, 255);
-  font-size: 4rem;
+  color: rgb(9, 177, 45);
+  font-size: 2.2rem;
 
 }
 .quem-somos button:hover {
-  background-color: blue;
+  background-color: rgb(110, 223, 135);
 }
 .apresentacao-equipe-text {
-  grid-row: 2;
+  grid-row: 1;
   grid-column: 2;
+  width: 90%;
+  margin-left: 25px;
 }
 .apresentacao-equipe-text section{
-  margin-left: 10px;
-  display: block;
-  margin-top: 50px;
+  margin-left: 2px;
   height: auto;
   grid-row: 2;
   grid-column: 2;
 }
 .apresentacao-equipe-text h2{
+  margin-top: 30%;
+  display: inline-flex;
   margin-left: -8px;
-  color: aquamarine;
-  font-size: 4.4rem;
-}
-.apresentacao-equipe-text p{
-  margin-top: 10px;
-  color: white;
-  font-size: 1.6rem;
+  color: rgb(255, 255, 255);
+  font-size: 3rem;
 }
 
 .ativo {
@@ -185,329 +183,106 @@
     transform: translate3d(0, 0, 0);
   }
 }
-/***** funcionalidades *****/
-.funcionalidades-informativo {
-  display: grid;
-  grid-template-columns: 40% 60%;
-  grid-template-rows: auto auto;
-  gap: 2px; /* Espaçamento entre as colunas */
-  padding: 2px;
+
+article h2{
+  margin-top: 20px;
 }
 
-.funcionalidades-titulo {
-  display: block;
-  grid-row: 1;
-  grid-column: 1/-1 !important;
-  margin-left: 40px !important;
-  color: black;
-  background-color: rgb(23, 248, 248);
-  border-radius: 20px 20px 60px;
-  padding: 4px;
-  padding-left: 20px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 2.7rem;
-}
-
-.funcionalidades-informativo h3 {
-  grid-column: 1;
-  border-left: 0.5rem  solid white;
-  display: block;
-  flex-wrap: wrap;
-  font-size: 2.1rem;
-  height: auto;
-  gap: 0px;
-  margin-top: 10px;
-  margin-left: 80px;
-  margin-bottom: 25px;
-  width: 80%;
-  max-width: 100%;
-}
-  
-.funcionalidades-informativo p {
-  grid-column: 2;
-  display: inline;
-  font-size: 1.4rem;
-  height: auto;
-  max-height: auto;
-  width: auto;
-  margin-left: 0px;
-  margin-bottom: 0px;
-  border-left: 0.5rem  solid white;
-  border-radius: 30px;
-  padding: 10px;
-}
-.funcionalidades-informativo .ed-f {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  margin-left: 70px;
-  grid-column: 1/-1;
-  height: 400px;
-  width: auto;
-}
-
-.funcionalidades-informativo .ed-f img {
-  display: block;
-  height: 360px;
-  border-radius: 30px;
-  width: auto;
-}
-
-.ed-f .edf {
-  grid-column: 1;
-}
-.ed-f .quiz-img {
-  margin-left: -50px;
-  grid-column: 2;
-}
-/*   graficos   */
-.graficos{
-  margin-left: 0px;
-  height: auto;
-  grid-row: 3;
-  grid-column: 1/-1;
-  display: grid;
-  grid-template-columns: 40% 60%;
-}
-.grafico-botoes{
-  display: flex;
-  flex-direction: column;
-  align-content: space-between;
-  margin-top: 12px;
-  margin-left: 80px;
-  grid-column: 1;
-  display: block;
-}
-.grafico-img {
-  grid-column: 2;
-  display: block;
-  height: 390px;
-  width:  100%;
-}
-.grafico-img img{
- border: solid aquamarine;
- border-radius: 30px; 
- height: 340px;
- width: auto;
- align-items: center;
-}
-
-.grafico-botoes a {
-  border: solid 5.5px transparent;
-  display: flex;
-  flex-direction: column;
-  background-color: aquamarine;
-  color: rgb(0, 0, 0);
-  font-size: 1.4rem;
-
-  align-items: center;
-  justify-self: center;
-  border-radius: 40px;
-  width: 190px;
-  padding: 10px;
-  margin: 15px;
-  margin-top: 8px;
-
-}
-.grafico-botoes a:hover{
-  font-size: 1.45rem;
-  color: rgb(255, 255, 255);
-  background-color: rgb(87, 236, 187);
-  border: solid 4px white;
-
-}
-
-.ativo {
-  display: block;
-}
-
-.grafico-img img{
-  display: none;
-}
-
-.grafico-img img.ativo{
-  display: block !important;
-  animation: show-img 1.5s forwards !important;
-}
-
-@keyframes show-img {
-  from {
-    opacity: 0;
-    transform: translate3d(0, -30px, 0);
-  }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-
-/*
-
-
-
-
-
-
-
-*/
-
-/* responsivo */
-@media (max-width: 1100px ) {
-  .principal_introducao {
-    display: grid;
-    margin: 20px;
-    grid-template-columns: 100%;
-  }
-  .funcionalidades-informativo {
-    display: grid;
-    grid-template-columns: 90%;
-    width: 100%;
-    margin-left: -120px;
-  }
-  .funcionalidades-informativo p {
-    grid-column: 1;
-  }
-  .grafico-img {
-    grid-column: 2;
-    width: 100%;
-    margin-left: 40px;
-  }
-  .intro-img {
-    display: block;
-    grid-column: 1;
-    align-content: center;
-    height: 100%;
-    width: 100%;
-    margin-top: 25px;
-    border-radius: 260px;
-    position: relative;
-    z-index: 1;
-
-  }
-  .intro-text {
-    margin-top: 30px;
-    z-index: 2;
-    position: absolute;
-  }
-  .intro-img img {
-    display: block;
-    align-content: center;
-    height: 100%;
-    border-radius: 160px 15px;
-  }
-  .profissao {
-    font-size: 1.5rem;
-  }
-  .profissao,
-  .nome2 {
-    color:rgb(87, 236, 187)
+@media (max-width: 500px ) {
+  body {
+    margin: 0px;
+    padding: 0px;
   }
   .quem-somos {
-    margin-top: 30px;
-    height: auto;
-    max-height: auto;
-  }
-  .quem-somos h3 {
-
-    margin-left: -15px;
-    font-size: 2rem;
-  }
-  .quem-somos p{
-    font-size: 1.1rem;
-    margin: 4px;
-    margin-top: 40px ;
-  }
-  .quem-somos button{
-    height: 80px;
-    font-size: 2rem;
-  }
-  .grafico-botoes a {
-    font-size: .9rem;
-  } 
-
-  .grafico-botoes a:hover{
-    font-size: .96rem;
+   grid-template-columns: 92% 4% !important;
+   grid-template-rows: auto 40px;
 
   }
+  .apresentacao-equipe-img li{
+    width: 100%;
+    max-width: 500px;
+    grid-row: 1;
+    grid-column: 1 !important;
+
+  }
+  .apresentacao-equipe-img li img{
+    margin-left: 4px;
+    grid-row: 1;
+    grid-column: 1 !important;
+    width: 500px;
+
+  }
+  
   .apresentacao-equipe-text {
-    margin-top: 2px;
+    margin-left: 20px;
+    width: 100%;
+    grid-row: 2;
+    grid-column: 1/2;
   }
   .apresentacao-equipe-text h2{
-    margin-top: -30px;
-    margin-left: -8px;
-    color: aquamarine;
-    font-size: 2.4rem;
-  }
-  .apresentacao-equipe-text p {
-    font-size: 1.2rem;
-    margin-top: 10px;
+  font-size: 1.45rem;
+  margin-top: 5px;
   }
 
-  .apresentacao-equipe-img li{
-    grid-row: 2;
-    grid-column: 1;
-    width: 210px;
-  }
-  .quem-somos {
-  grid-template-rows: auto;
-  }
-
-}
-
-@media (max-width: 700px ) {
-  .principal_introducao{
-    grid-template-columns: 100%;
-  }
-  .intro-img{
-    grid-column: 1;
-    grid-row: 2;
-  }
-  .intro-img img {
-    border-radius: 10px !important;
-
-  }
   .intro-p{
     font-size: 1.2rem !important;
     margin-top: 10px;
+    grid-row: 2;
+
   }
   .intro-text h2, 
   .profissao{
     font-size: 2rem;
   }
-  .nome1{
-    font-size: 6rem !important;
-    margin-left: 10px !important;
-    margin-bottom: 5px !important;
+  .resultados {
+    background-color: rgb(18, 91, 139);
+    grid-template-rows: auto auto auto;
+    margin: 2px;
+    margin-bottom: 20px;
+  }
+  .resultados p{
+    font-size: 0.9rem;
+    grid-row: 3/-1;
+    grid-column: 1/1;
+  }
+  .resultados h4{
+    font-size: 1rem;
+    grid-row: 2;
+  }
+  .resultados h3{
+    background-color: none;
+
+    padding: 2px;
+    font-size: 1.2rem;
+  }
+  .r1, .r2{
+    margin-top: 15px;
+  }
+  .item-g p,
+  .item-g b {
+    font-size: 0.6 !important;
+  }
+  .item-g h2{
+    font-size: 1.1rem;
+    text-align: justify;
+  }
+  .item-g{
+    background-color: rgb(18, 91, 139);
 
   }
-  .nome2{
-    font-size: 6rem !important;
-    margin-left: 30px !important;
-    
+  .item-g label, .item-g input, .item-g button{
+    font-size: 1.05rem;
   }
-  .menu, .grid-section, .copy {
-    grid-column: 1;
+  .indented h2{
+    font-size: 1.25rem;
+    margin-top: 8px;
   }
-  .grid-section {
-    grid-template-columns: 100px 1fr;
-    grid-gap: 10px;
+  .indented p {
+    font-size: .9rem;
   }
-  .animais-lista {
-    grid-column: 1;
-  }
-  .faq-lista, .dados, .mapa {
-    grid-column: 1 / 3;
-  }
-  .grid-section h1 {
-    font-size: 3rem;
-  }
-  .menu {
-    margin-top: 0px;
-  }
-  .copy {
-    margin-bottom: 0px;
-  }
-  
 }
+
+
+  
 
 

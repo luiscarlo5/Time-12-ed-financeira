@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv='X-UA-Compatible' content="IE=edge">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/projetoMand.css')}}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.className += ' js';</script>
+  <script src="{{ url_for('static', filename='js/projetoVS.js')}}"></script>
+  <title>Cálculo Numérico - UFC</title>
+</head>
+
+<body>
+  <header class="Cabecalho">
+    <div class="fundoinicial">
+      <div class="aux-ufc">
+        <img src="{{ url_for('static', filename='img/logo_ufc.png')}}" alt=" ">
+        <h1 class="titulo">Trabalho de Cálculo Numérico</h1>
+      </div class="nomes">
+        <h2>UNIVERSIDADE FEDERAL DO CEARÁ CENTRO DE CIÊNCIAS DEPARTAMENTO DE COMPUTAÇÃO CÁLCULO NUMÉRICO</h2>
+        <p> </p>
+        <h2> Implementação de métodos numéricos para encontrar raízes de equações.</h2>
+      </div>
+    </div>
+  </header>
+  <div class="item-g">
+  <form method="POST" action="{{ url_for('numc')}}">
+  {% for i in num_c%}
+      <label for="valorC_numero{{i}}">Digite o valor de C<sub>{{ i }}</sub></label>
+      <input type="number" name="valorC_numero{{i}}" required><br>
+  {% endfor %}
+  <button style="margin-top: 20px;" type="submit">Enviar os valores de C<sub>n</sub></button>
+</div>
+
+ </form>
+</body>
+</html>

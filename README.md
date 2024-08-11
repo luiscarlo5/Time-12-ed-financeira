@@ -1,1 +1,0 @@
-Plataforma The Twelve Web para educação financeira, com área de ensino padrão e lúdico e de anásile de gastos e investimentos do cliente, podendo ter a possibilidade de ter previsões atráves de IAs de previsão (modelos clássicos)

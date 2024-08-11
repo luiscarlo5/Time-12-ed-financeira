@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv='X-UA-Compatible' content="IE=edge">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/projetoMand.css')}}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.className += ' js';</script>
+  <script src="{{ url_for('static', filename='js/projetoVS.js')}}"></script>
+  <title>Cálculo Numérico - UFC</title>
+</head>
+
+<body>
+  <header class="Cabecalho">
+    <div class="fundoinicial">
+      <div class="aux-ufc">
+        <img src="{{ url_for('static', filename='img/logo_ufc.png')}}" alt=" ">
+        <h1 class="titulo">Trabalho de Cálculo Numérico</h1>
+      </div class="nomes">
+        <h2>UNIVERSIDADE FEDERAL DO CEARÁ CENTRO DE CIÊNCIAS DEPARTAMENTO DE COMPUTAÇÃO CÁLCULO NUMÉRICO</h2>
+        <p> </p>
+        <h2> Implementação de métodos numéricos para encontrar raízes de equações.</h2>
+      </div>
+    </div>
+  </header>
+  <article>
+    <h2>Resultados:
+        <b>{{resultadosLC}}</b>
+    </h2>
+  </article>
+  <main>
+    <section style="margin-bottom: 140px;" class="quem-somos">
+        <button id="botao-apresentacao-equipe"> >
+        </button>
+        <ul class="apresentacao-equipe-img">
+            <li><img src="{{ url_for('static', filename='imgs_matplotlib/comparacao_iteracoes.png')}}" alt=" "></li>
+            <li><img src="{{ url_for('static', filename='imgs_matplotlib/comparacao_erros.png')}}" alt=" "></li>
+            <li><img src="{{ url_for('static', filename='imgs_matplotlib/Tempo_execucao.png')}}" alt=" "></li>
+        </ul>
+        <div class="apresentacao-equipe-text">
+            <section><h2>Comparação do número de interações</h2></section>
+            <section><h2>Comparação dos erros</section>
+            <section><h2>Comparação do tempo de execução</h2></section>
+        </div>
+    </section>
+  </main>
+  <script src="{{ url_for('static', filename='js/projetoTime12.js')}}"></script>
+</body>
+</html>

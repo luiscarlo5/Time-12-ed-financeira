@@ -1,13 +1,19 @@
-html {background-image: url(../img/fundoabstrato.jpg);
+html {background-color: rgba(0, 0, 0, 0.753);
   background-repeat: repeat;
 }
 body {
+  background-color: rgb(0, 0, 0);
   display: grid;
   grid-template-columns: 100%;
   font-family: "Fira Sans", Arial, sans-serif;
   margin: 0px 150px 0px 150px;
   color: white;
   align-content:center ;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: solid rgb(23, 89, 187) 10px ;
+  border-top: none;
+  border-bottom: 5px;
   
 }
 h1,
@@ -59,8 +65,14 @@ button {
     margin: 0px 5px 0px 5px;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   body {
-    margin: 0px 2px 0px 0px;
+  margin: 1px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: solid rgb(1, 79, 196) 4px ;
+  border-top: none;
+  border-bottom: 5px;
+    
   }
 }
