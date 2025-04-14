@@ -2,7 +2,9 @@ Plataforma The Twelve Web para educação financeira, com área de ensino padrã
 
 # 💰 The Twelve Web - Plataforma Interativa de Educação Financeira
 
-![EduFinance Banner](https://media.giphy.com/media/xT0GqzTQmGk5YkLCy0/giphy.gif)
+<p align="center">
+  <img src="https://media.giphy.com/media/xT0GqzTQmGk5YkLCy0/giphy.gif" alt="The Twelve Web">
+</p>
 
 ## 📘 Sobre o Projeto
 
