@@ -1,55 +1,37 @@
-Plataforma The Twelve Web para educação financeira, com área de ensino padrão e lúdico e de anásile de gastos e investimentos do cliente, podendo ter a possibilidade de ter previsões atráves de IAs de previsão (modelos clássicos)
+# Mandacaru.dev – The Twelve  
+### Plataforma Web de Educação Financeira com IA, Gráficos e Metodologia Ágil
 
-# 💰 The Twelve Web - Plataforma Interativa de Educação Financeira
-
-<p align="center">
-  <img src="https://media.giphy.com/media/xT0GqzTQmGk5YkLCy0/giphy.gif" alt="The Twelve Web">
-</p>
-
-## 📘 Sobre o Projeto
-
-O **The Twelve Web** é uma plataforma interativa feita com 💻 **Flask + Python** para ajudar jovens e adultos a aprenderem sobre finanças de forma divertida!
-
-🔍 O projeto inclui:
-- Quizzes com temas de orçamento, investimentos, dívidas e mais 💸
-- Previsor inteligente de gastos usando **regressão linear** 🤖
-- Análises financeiras com **matplotlib** 📊
-- Banco de dados local com **SQLite3** 💾
-- Visual moderno com imagens e **GIFs engraçados para tornar o estudo mais divertido** 😁
+Este projeto é uma aplicação web desenvolvida com **Flask**, focada em **Educação Financeira**, combinando recursos informativos, gráficos interativos, quizzes e um módulo de **previsão com Inteligência Artificial**.  
+Foi desenvolvido ao longo de pouco mais de **1 mês**, aplicando princípios de **metodologia ágil**, priorização de funcionalidades e integração contínua.
 
 ---
 
-## 🚀 Tecnologias Utilizadas
+## Funcionalidades Principais
 
-| Tecnologia      | Finalidade |
-|------------------|------------|
-| Python           | Lógica do projeto |
-| Flask            | Backend Web |
-| SQLite3          | Banco de dados |
-| Matplotlib       | Gráficos |
-| HTML/CSS + Jinja2| Templates |
-| Scikit-learn     | IA (Regressão Linear) |
-| Pandas / Numpy   | Manipulação e análise de dados |
+### 1. Área Informativa de Educação Financeira  
+Conteúdos introdutórios e explicativos sobre finanças pessoais, pensados para usuários iniciantes.
+
+### 2. Inteligência Artificial  
+Um modelo de **Regressão Linear** treinado a partir de dados históricos de inflação de alimentos no estado de São Paulo.  
+Ele gera uma **previsão para os próximos 3 meses**, exibida no último gráfico da aba de visualizações.
+
+*O modelo foi desenvolvido em um notebook no Google Colab:*  
+`Time 12/app/ModelosIA/Notebook-&-Dados_Ia`
 
 ---
 
-## 🧠 IA - Previsor Financeiro
+### 3. Inserção de Dados pelo Usuário  
+O usuário pode inserir:
 
-Utilizei **Regressão Linear** para prever os gastos mensais dos usuários com base no histórico de despesas e receitas.
+- Gastos mensais (janeiro a junho)  
+- Gastos semanais (segunda a domingo)  
+- Categorias de despesas (alimentação, imóvel, água, energia etc.)  
+- Salário mensal  
 
-### Etapas do pipeline:
+Essas informações são registradas e utilizadas para gerar diversos gráficos.
 
-```python
-import pandas as pd
-from sklearn.linear_model import LinearRegression
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
+---
 
+### 4. Geração de Gráficos  
+A aplicação cria automaticamente gráficos por meio do módulo:
 
-# Treinamento
-X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2)
-modelo = LinearRegression()
-modelo.fit(X_train, y_train)
-
-# Previsão
-previsao = modelo.predict([[3000, 1200, 500]])
