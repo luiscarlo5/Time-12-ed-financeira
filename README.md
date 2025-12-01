@@ -33,5 +33,34 @@ Essas informações são registradas e utilizadas para gerar diversos gráficos.
 ---
 
 ### 4. Geração de Gráficos  
-A aplicação cria automaticamente gráficos por meio do módulo:
+A aplicação cria automaticamente gráficos por meio do módulo: Criar_Salvar_Grafico.py
+
+Os gráficos produzidos incluem:
+
+- Gráfico de gastos mensais  
+- Gráfico semanal em barras  
+- Gráfico comparativo por tópicos de despesa  
+- Gráfico de linha premium  
+- Gráfico preditivo da inflação (IA)  
+
+---
+
+### 5. Login e Cadastro de Usuários  
+O backend usa um módulo simples de banco de dados: bancodados.py
+
+Que realiza:
+
+- Criação da tabela  
+- Inserção de usuários  
+- Verificação se o usuário está acessando pela primeira vez  
+
+---
+
+### 6. Quiz Interativo  
+Área com perguntas sobre educação financeira para reforçar conhecimento de forma leve e descontraída.
+
+---
+
+
+
 
